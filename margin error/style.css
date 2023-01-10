@@ -1,0 +1,11 @@
+.container{
+    margin-top:5rem;
+    
+}
+.child{
+    margin-top:5rem;
+    background-color: blue;
+}
+
+/* margin 겹침은 margin 사이에 
+시각적인 효과(border, 글자같은) 가 있으면 발생하지 않는다 */

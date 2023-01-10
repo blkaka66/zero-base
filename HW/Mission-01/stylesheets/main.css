@@ -1,0 +1,11 @@
+/* 공통 스타일 */
+@import url("./common/theme.css");
+@import url("./common/base.css");
+
+/* 페이지별 스타일 */
+@import url("./pages/discovery.css");
+
+@font-face {
+    font-family:font;
+    src: url(../font/NotoSansKR-Regular.otf);
+}

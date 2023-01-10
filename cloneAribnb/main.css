@@ -1,0 +1,388 @@
+.wrap
+{
+    background-color: white;
+    width:80%;
+    max-width:1920px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+@media screen and(max-width: 767px)
+{
+    .wrap
+    {
+        width:90%;
+    }
+}
+.black-bg
+{
+    background-color: black;
+    width:100vw;
+    height:1000px;
+    position: absolute;
+    left:0;
+    z-index:1;
+}
+/* header */
+header{
+    z-index:10;
+    text-align:center;
+    padding-top:20px;
+    position:relative;
+    color:white;
+}
+header .gnb
+{
+    display:grid;
+    width:100%;
+    /* 양 옆에 300px씩 주고 나머지 공간 중앙에 할당 */
+    grid-template-columns: 300px 1fr 300px; 
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo gnb-menu menu"
+    "search search search";
+}
+header .gnb .logo
+{
+    grid-area:logo;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+}
+header .gnb .gnb-menu
+{
+    grid-area:gnb-menu;
+    display:flex;
+    align-items: center;
+
+}
+header .gnb .gnb-menu ul{
+    width:30%;
+    display:flex;
+    justify-content: space-evenly;
+    margin:0 auto;
+    
+}
+header .gnb .gnb-menu ul li{
+    font-weight:bold;
+    cursor:pointer;
+    position:relative;
+    padding-bottom: 10px;
+    
+}
+
+header .gnb .gnb-menu ul li:hover{
+    color:gray;
+    
+}
+header .gnb .gnb-menu ul li:hover::before{
+    content:"";
+    height:2px;
+    width:5px;
+    background-color: white;
+    position:absolute;
+    bottom:0px;
+    left:50%;
+    transform: translate(-50%,0);
+    
+}
+
+header .gnb .gnb-menu ul .active:hover{
+    color:white;
+    
+}
+header .gnb .gnb-menu ul .active:hover::before{
+    
+    width:15px;
+
+    
+}
+
+header .gnb .gnb-menu ul .active::before{
+    content:"";
+    height:2px;
+    width:15px;
+    background-color: white;
+    position:absolute;
+    bottom:0px;
+    left:50%;
+    transform: translate(-50%,0);
+ }
+header .gnb .gnb-menu ul li{
+    font-weight:bold;
+    cursor:pointer;
+    position:relative;
+    padding-bottom: 10px;
+    
+}
+
+header .gnb .menu
+{
+    grid-area:menu;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    width:80%;
+    margin-left:20%;
+}
+
+header .gnb .menu .menu-hover
+{
+    padding:10px 10px;
+    border-radius: 30px;
+}
+header .gnb .menu .menu-hover:hover
+{
+    background-color: rgba(172,172,172,0.3);
+}
+header .gnb .menu .profile
+{
+    background-color: white;
+    color:gray;
+    padding:5px ;
+    border-radius: 30px;
+    font-weight: bold;
+}
+header .gnb .search
+{
+    grid-area:search;
+    width:70%;
+    margin: 0 auto;
+}
+header .gnb .search .searchUl
+{
+    background-color: white;
+    color:black;
+    display:flex;
+    border-radius: 50px;
+}
+header .gnb .search .searchUl li{
+    width:25%;
+    text-align: left;
+    padding: 20px 50px 20px 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    position: relative;
+
+}
+header .gnb .search .searchUl li::after{
+    position:absolute;
+    content:"";
+    width:1px;
+    height:calc(100% - calc(20px *2 ));
+    right:0;
+    top:50%;
+    background-color: lightgray;
+    transform: translate(0,-50%);
+    border-right:1px solid black;
+}
+header .gnb .search .searchUl li span{
+    color:gray;
+    font-size: 12px;
+    font-weight: normal;
+}
+header .gnb .search .searchUl li:hover{
+    background-color: lightgray;
+}
+header .gnb .search .searchUl li:last-of-type::after{
+    display:none;
+}
+
+/* notice */
+
+.notice
+{
+    background-color: #ff385c;
+    border-radius: 14px;
+    text-align: center;
+    height:320px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index:10;
+}
+.notice p{
+    font-size:1.5rem;
+    color:white;
+	font-weight: bold;
+	line-height:1.8rem;
+    margin-bottom: 2rem;
+}
+.notice button{
+    border:1px solid white;
+    padding: 5px 15px;
+    color:white;
+    background-color: inherit;
+    font-weight: bold;
+    border-radius: 14px;
+}
+
+/* mainBanner */
+.mainBanner
+{
+    position: relative;
+    z-index:10;
+    height:600px;
+    border-radius: 14px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+   
+    padding-bottom: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://a0.muscache.com/im/pictures/5b6242a9-8832-432b-ac79-38de2a3d0b0d.jpg?im_w=720");
+}
+.mainBanner .content
+{
+    color:white;
+    text-align: center;
+   
+}
+.mainBanner .content p{
+    font-size:2rem;
+    font-weight: bold;
+    margin-bottom:2rem;
+}
+.mainBanner .content button{
+    border:1px solid white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 24px;
+}
+/* idea */
+
+.city
+{
+    display:flex;
+    width:100%;
+    overflow: auto;
+ 
+}
+.city .card
+{
+    width:25%;
+    min-width:250px;
+    margin-right:30px;
+    cursor:pointer;
+}
+.city .card:nth-last-of-type(1)
+{
+    margin-right:0px;
+}
+.city .card img
+{
+    width:100%;
+    height:150px;
+    display:block;
+    border-radius: 15px 15px 0px 0px;
+    
+}
+.city .card figcaption
+{
+    border-radius: 0px 0px 15px 15px;
+    height:cacl(150px-calc(24px *2));
+    padding:24px 16px;
+    color:white;
+}
+.city .card figcaption p{
+    font-size:2rem;
+    line-height: 3rem;
+    font-weight: bold;
+    
+}
+.city .card figcaption span{
+    font-size: 1rem;
+
+}
+
+@media screen and (max-width:767px) {
+        .city
+    {
+      
+    }
+    .city .card
+    {
+       
+        margin-right:15px;
+        
+    }
+   
+ 
+
+    .city .card figcaption p{
+        font-size:1.5rem;
+        line-height: 2rem;
+        padding-bottom: 0.5rem;
+        
+    }
+    
+}
+/* expression */
+
+.expression
+{
+    display: gird;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:25px;
+    grid-template-areas: 
+    "heading heading"
+    "div1 div2";
+}
+@media screen (max-width : 576px) {
+    .expression
+    {
+        display: gird;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+        grid-gap:15px;
+        grid-template-areas:
+        "heading"
+        "div1"
+        "div2";
+    }
+}
+.expression .photoDiv
+{
+    
+    height: calc(700px-calc(60px*2));
+    padding :60px;
+    border-radius: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.expression .photoDiv:nth-of-type(1)
+{
+    background-image: url(https://a0.muscache.com/im/pictures/0bd93b3e-29be-4520-ac90-ca3bfb081d4b.jpg?im_w=720);
+}
+.expression .photoDiv:nth-of-type(2)
+{
+    background-image: url(https://a0.muscache.com/im/pictures/0bd93b3e-29be-4520-ac90-ca3bfb081d4b.jpg?im_w=720);
+}
+.expression .photoDiv p{
+    color:white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.expression .photoDiv button{
+    color:black;
+    font-weight: bold;
+    border:none;
+    background-color: white;
+    padding:15px 23px;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.expression .photoDiv button:hover{
+    background-color: lightgray;
+}

@@ -1,0 +1,40 @@
+h2,h3
+{
+    font-family: font,'Arial Narrow', Arial, sans-serif;
+}
+body{
+    position: relative;
+}
+
+.head
+{
+    display:flex;
+    margin-left:321px;
+    margin-top:100px;
+    
+}
+
+
+.product
+{
+    position:absolute;
+    display:flex;
+    width:1020px;
+    height:1010px;
+
+    margin-left:321px;
+    margin-top:228px;
+    
+}
+
+.product .product-header ::after
+{
+    margin-left:10px;
+    position: absolute;
+    content: "";
+    width: 2px;
+    height:20px;
+    background-color: gray;
+   
+}
+
