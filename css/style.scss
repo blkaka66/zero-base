@@ -1,0 +1,27 @@
+$radius:14px;
+body{
+    height:1000vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+.scroll-outer
+{
+    position:fixed;
+    width: 100vw;
+    height: 5px;
+    border-radius: $radius;
+    top:10px;
+    left:50%;
+    background-color: gray;
+    transform: translateX(-50%);
+}
+.scroll-iner
+{
+    width:0px;
+    height:100%;
+    position: absolute;
+    top:0;
+    background-color: yellow;
+    border-radius: $radius;
+
+}

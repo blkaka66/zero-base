@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>Zero base Event Capturing</title>
+		<meta charset="utf-8" />
+		<style>
+			body {
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			body * {
+				margin: 20px;
+				border: 2px solid red;
+			}
+
+			body * > * {
+				border-color: orange;
+			}
+
+			body * > * > * {
+				border-color: yellow;
+			}
+
+			body * > * > * > * {
+				border-color: green;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<h1>장바구니</h1>
+			<ul>
+				<li>노트북</li>
+				<li>모니터</li>
+				<li>책상</li>
+				<li>의자</li>
+				<li>키보드</li>
+				<li>마우스</li>
+			</ul>
+		</div>
+	</body>
+
+	<script>
+		const container = document.querySelector('div');
+		const list = document.querySelector('ul');
+
+		container.addEventListener('click', (event) => {
+			console.error('DIV에 이벤트 발생');
+			event.target.style.background = 'blue';
+		});
+
+		list.addEventListener('click', (event) => {
+			console.warn('UL 이벤트 발생');
+			event.target.style.background = 'red';
+		});
+	</script>
+</html>

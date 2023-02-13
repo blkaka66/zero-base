@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>Zero base</title>
+		<meta charset="utf-8" />
+		<script type="module" src="./05-es-module-export.js"></script>
+		<script type="module">
+			import { a, hello } from './05-es-module-export.js';
+
+			console.log(a);
+			console.log(hello());
+		</script>
+	</head>
+
+	<body></body>
+</html>

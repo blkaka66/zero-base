@@ -1,7 +1,4 @@
-h2,h3
-{
-    font-family: font,'Arial Narrow', Arial, sans-serif;
-}
+
 body{
     position: inline-block;
 }
@@ -51,11 +48,12 @@ body{
 }
 .product .products
 {
+    
     display:grid;
     width:100%;
     height: 100%;
     padding-top:52px;
-    
+    gap:16px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr;
     grid-template-areas: 
@@ -63,45 +61,399 @@ body{
     "body1 body2"
     "foot1 foot2";
 }
+/* head 1 시작 */
 .product .products .products-head1
 {
+    position: relative;
     grid-area: head1;
-    background-color: red;
-    width:auto;
-    height:auto;
+    
+    width:502px;
+    height:310px;
 }
+.product .products .products-head1 .logo1
+{
+    width:100%;
+    height:100%;
+}
+
+.product .products .products-head1 :hover
+{
+    border:1px solid blue;
+}
+.product .products .products-head1 .bt1
+{
+
+   position: absolute;
+   left:20px;
+   top:248px;
+   width:112px;
+   height:42px;
+   background-color: blue;
+
+}
+.product .products .products-head1 .bt1 .write1
+{
+
+   color:white;
+
+}
+/* head1끝 */
+/* head2 시작*/
 .product .products .products-head2
 {
     grid-area: head2;
-    background-color: green;
-    width:auto;
-    height:auto;
+    position: relative;
+    width:502px;
+    height:310px;
 }
-.product .products .products-body1
+.product .products .products-head2 .logo2
 {
-    grid-area:body1;
-    background-color: yellow;
-    width:auto;
-    height:auto;
+    width:100%;
+    height:100%;
 }
+
+.product .products .products-head2 :hover
+{
+    
+    border: 1px solid blue;
+    transition: all 10s ;
+}
+.product .products .products-head2 .bt2
+{
+
+   position: absolute;
+   left:20px;
+   top:248px;
+   width:112px;
+   height:42px;
+   background-color: blue;
+
+}
+.product .products .products-head2 .bt2 .write2
+{
+
+   color:white;
+
+}
+/* head2 끝*/
+/* body1 flex 시작 */
+.product .products .products-body1 
+{
+    
+    grid-area:body1;
+    display:flex;
+    align-items: center;
+    
+    
+    
+}
+/* body1 flex 끝 */
+/* body1-1시작 */
+.product .products .products-body1 .products-body1-1
+{
+    
+    width:243px;
+    height:310px;
+    margin-right:16px;
+    position: relative;
+}
+.product .products .products-body1 .products-body1-1 .logo3
+{
+    width:100%;
+    height:100%;
+}
+
+.product .products .products-body1 .products-body1-1 :hover
+{
+    
+    border: 1px solid blue;
+    transition: all 10s ;
+}
+.product .products .products-body1 .products-body1-1 .bt3
+{
+
+   position: absolute;
+   left:20px;
+   top:248px;
+   width:112px;
+   height:42px;
+   background-color: blue;
+
+}
+.product .products .products-body1  .products-body1-1 .bt3 .write3
+{
+
+   color:white;
+
+}
+/* body1-1끝 */
+/* body 1-2시작 */
+.product .products .products-body1 .products-body1-2
+{
+   
+   
+    
+    position: relative;
+    width:243px;
+    height:310px;
+}
+.product .products .products-body1 .products-body1-2 .logo4
+{
+    width:100%;
+    height:100%;
+}
+
+.product .products .products-body1 .products-body1-2 :hover
+{
+    
+    border: 1px solid blue;
+    transition: all 10s ;
+}
+.product .products .products-body1 .products-body1-2 .bt4
+{
+
+   position: absolute;
+   left:20px;
+   top:248px;
+   width:112px;
+   height:42px;
+   background-color: blue;
+
+}
+.product .products .products-body1  .products-body1-2 .bt4 .write4
+{
+
+   color:white;
+
+}
+/* body 1-2끝 */
+/* body 2 flex 시작 */
 .product .products .products-body2
 {
+    
     grid-area:body2;
-    background-color: blue;
-    width:auto;
-    height:auto;
+    display:flex;
+    align-items: center;
+    
+    
+    
 }
+/* body 2 flex 끝 */
+/* body2-1시작 */
+.product .products .products-body2 .products-body2-1
+{
+    
+    width:243px;
+    height:310px;
+    margin-right:16px;
+    position: relative;
+}
+.product .products .products-body2 .products-body2-1 .logo5
+{
+    width:100%;
+    height:100%;
+}
+
+.product .products .products-body2 .products-body2-1 :hover
+{
+    
+    border: 1px solid blue;
+    transition: all 10s ;
+}
+.product .products .products-body2 .products-body2-1 .bt5
+{
+
+   position: absolute;
+   left:20px;
+   top:248px;
+   width:42px;
+   height:42px;
+   background-color: gray;
+   opacity:20%;
+
+}
+.product .products .products-body2  .products-body2-1 .bt5 .write5
+{
+
+   color:white;
+
+}
+/* body2-1끝 */
+/* body 2-2시작 */
+.product .products .products-body2 .products-body2-2
+{
+   
+   
+    
+    position: relative;
+    width:243px;
+    height:310px;
+}
+.product .products .products-body2 .products-body2-2 .logo6
+{
+    width:100%;
+    height:100%;
+}
+
+.product .products .products-body2 .products-body2-2 :hover
+{
+    
+    border: 1px solid blue;
+    transition: all 10s ;
+}
+.product .products .products-body2 .products-body2-2 .bt6
+{
+
+
+    position: absolute;
+    left:20px;
+    top:248px;
+    width:42px;
+    height:42px;
+    background-color: gray;
+    opacity:20%;
+
+}
+.product .products .products-body2  .products-body2-2 .bt6 .write6
+{
+
+   color:white;
+
+}
+/* body 2-2끝 */
+/* foot1 시작 */
 .product .products .products-foot1
 {
+    position: relative;
     grid-area: foot1;
-    background-color: orange;
-    width:auto;
-    height:auto;
+    
+    width:502px;
+    height:310px;
 }
+.product .products .products-foot1 .logo7
+{
+    width:100%;
+    height:100%;
+}
+
+.product .products .products-foot1 :hover
+{
+    border:1px solid blue;
+}
+.product .products .products-foot1 .bt7
+{
+
+ 
+    position: absolute;
+    left:20px;
+    top:248px;
+    width:42px;
+    height:42px;
+    background-color: gray;
+    opacity:20%;
+
+}
+.product .products .products-foot1 .bt7 .write7
+{
+
+   color:white;
+
+}
+/* foot 1끝 */
+/* foot 2 flex시작 */
 .product .products .products-foot2
 {
-    grid-area: foot2;
-    background-color: black;
-    width:auto;
-    height:auto;
+    
+    grid-area:foot2;
+    display:flex;
+    align-items: center;
+    
+    
+    
 }
+
+/* foot 2 flex끝 */
+/* foot 2-1 시작 */
+.product .products .products-foot2 .products-foot2-1
+{
+    
+    width:243px;
+    height:310px;
+    margin-right:16px;
+    position: relative;
+}
+.product .products .products-foot2 .products-foot2-1 .logo8
+{
+    width:100%;
+    height:100%;
+}
+
+.product .products .products-foot2 .products-foot2-1 :hover
+{
+    
+    border: 1px solid blue;
+    transition: all 10s ;
+}
+.product .products .products-foot2 .products-foot2-1 .bt8
+{
+
+
+    position: absolute;
+    left:20px;
+    top:248px;
+    width:42px;
+    height:42px;
+    background-color: gray;
+    opacity:20%;
+
+
+}
+.product .products .products-foot2 .products-foot2-1 .bt8 .write8
+{
+
+   color:white;
+
+}
+/* foot 2-1끝 */
+/* foot 2-2시작 */
+.product .products .products-foot2 .products-foot2-2
+{
+   
+   
+    
+    position: relative;
+    width:243px;
+    height:310px;
+}
+.product .products .products-foot2 .products-foot2-2 .logo9
+{
+    width:100%;
+    height:100%;
+}
+
+.product .products .products-foot2 .products-foot2-2 :hover
+{
+    
+    border: 1px solid blue;
+    transition: all 10s ;
+}
+.product .products .products-foot2 .products-foot2-2 .bt9
+{
+
+
+   position: absolute;
+   left:20px;
+   top:248px;
+   width:42px;
+   height:42px;
+   background-color: gray;
+   opacity:20%;
+
+}
+.product .products .products-foot2 .products-foot2-2 .bt9 .write9
+{
+
+   color:white;
+
+}
+/* foot 2-2끝 */

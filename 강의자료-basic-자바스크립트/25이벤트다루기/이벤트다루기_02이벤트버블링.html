@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>Zero base Event Bubbling</title>
+		<meta charset="utf-8" />
+		<style>
+			body {
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			body * {
+				margin: 20px;
+				border: 2px solid red;
+			}
+
+			body * > * {
+				border-color: orange;
+			}
+
+			body * > * > * {
+				border-color: yellow;
+			}
+
+			body * > * > * > * {
+				border-color: green;
+			}
+		</style>
+	</head>
+
+	<body>
+		<article>
+			ARTICLE
+			<div>
+				DIV
+				<p>
+					P
+					<br />
+					<button>BUTTON</button>
+				</p>
+			</div>
+		</article>
+	</body>
+	<script>
+		const article = document.querySelector('article');
+		const division = document.querySelector('div');
+		const paragraph = document.querySelector('p');
+		const button = document.querySelector('button');
+
+		article.addEventListener('click', () => window.alert('article'));
+
+		division.addEventListener('click', () => {
+			event.stopPropagation();
+
+			window.alert('division');
+		});
+
+		paragraph.addEventListener('click', () => window.alert('paragraph'));
+
+		button.addEventListener('click', (event) => {
+			event.stopPropagation();
+
+			window.alert('button');
+		});
+	</script>
+</html>

@@ -1,1 +1,9 @@
 /* Base 스타일 작성 */
+h2,h3
+{
+    font-family: font,'Arial Narrow', Arial, sans-serif;
+}
+div
+{
+    border-box;
+}

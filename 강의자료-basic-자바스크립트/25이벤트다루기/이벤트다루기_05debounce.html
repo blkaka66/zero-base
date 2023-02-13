@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>Zero base Debounce</title>
+		<meta charset="utf-8" />
+		<style>
+			body {
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			body * {
+				margin: 20px;
+				border: 2px solid red;
+			}
+
+			body * > * {
+				border-color: orange;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form>
+			<input type="text" />
+		</form>
+	</body>
+	<script>
+		let i = 0;
+
+		document.querySelector('input').addEventListener(
+			'keyup',
+			debounce(() => {
+				i = i + 1;
+				console.log(i);
+			}, 500),
+		);
+
+		/**
+		 *
+		 * 이벤트 발생이 많을 때 가장 마지막 이벤트만을 실행시킨다.
+		 *
+		 * 실행시킬 함수, 지연시킬 밀리세컨드
+		 * */
+		function debounce(callback, wait) {
+			let timeout; // 초기 undefined
+
+			// 함수가 호출시 매번 반환
+			return function (...args) {
+				const context = this;
+
+				// 타이머를 취소시켜준다.
+				clearTimeout(timeout);
+				timeout = setTimeout(() => callback.apply(context, args), wait);
+			};
+		}
+	</script>
+</html>

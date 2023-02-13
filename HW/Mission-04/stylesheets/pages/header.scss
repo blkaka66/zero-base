@@ -1,0 +1,548 @@
+p
+{
+    margin:0px;
+}
+.main
+{
+    position: relative;
+    width:1920px;
+    height:150px;
+
+    .head
+    {
+        position:absolute;
+        top:0px;
+        width:1920px;
+        height:34px;
+        background-color: #F3F3F3;
+        .head-main
+        {
+            position: inherit;
+            top:5px;
+            left:225px;
+            height:24px;
+            width:1020px;
+            
+        
+            ul
+            {
+            
+                list-style:none;
+                display: flex;
+                flex-direction: row;
+                margin:0px;
+                padding:0px;
+                li
+                {
+                    p
+                    {
+                        font-size:12px;
+                        margin-left:5px;
+                    }
+                        
+                        .logon
+                        {
+                            position: relative;
+                            display: inline-block;
+                            left:870px;
+                            
+                        }
+                        .signup
+                        {
+                            position: relative;
+                            display: inline-block;
+                            left:870px;
+                            
+                        }
+                        .center
+                        {
+                            position: relative;
+                            display: inline-block;
+                            left:870px;
+                            
+                        }
+                        .play
+                        {
+                            position: relative;
+                            display: inline-block;
+                            left:-130px;
+                            
+                        }
+                        .marketing
+                        {
+                            position: relative;
+                            display: inline-block;
+                            left:-130px;
+                            
+                        }
+                }
+            }
+        }
+    }
+    .main-body
+    {
+        position: absolute;
+        top:34px;
+        left:0px;
+        width:1920px;
+        height:116px;
+        .body
+        {
+            position: inherit;
+            left:13%;
+            width:1020px;
+            height:100%;
+            display:grid;
+            grid-template-columns: 110px 755px auto;
+            gap:10px;
+            .button--category
+            {
+                position: relative;
+                background-color: #0074E9;
+                border:0px;
+                .des
+                {
+                    position: absolute;
+                    left:32.5px;
+                    top:72px;
+                    margin:0px;
+                    font-size:12px;
+                    color:white;
+                }
+            }
+            .body1
+            {
+                display:grid;
+                grid-template-rows: 2fr 1fr;
+                .up
+                {
+                    position: relative;
+                    
+                    .logo
+                    {
+                        display: inline-block;
+                        position: absolute;
+                        left: 30px;
+                        top:35px;
+                        
+                        .a{
+                            width :176px;
+                            height: 40px;
+                        }
+                    }
+                    .search-box
+                    {
+                        position: absolute;
+                        left: 200px;
+                        top:0px;
+                        width:516px;
+                        height:40px;
+                        border:1px solid #0074E9;
+                        display:grid;
+                        grid-template-columns: 135px 301px 40px 40px;
+                        .first
+                        {
+                            
+                            font-size:12px;
+                            color:#767676;
+                            padding:0px;
+                            
+                        }
+                        .second
+                        {
+                            
+                            font-size:12px;
+                            color:#767676;
+                            padding:0px;
+                            .search
+                            {
+                                width:100%;
+                                height:100%;
+                            }
+                        }
+                        .third
+                        {
+                            border:0px;
+                            background-position: center;
+                            align-content: center;
+                            background-image: url(../../assets/icon/mic.svg);
+                        }
+                        .forth
+                        {
+                            border:0px;
+                            background-position: center;
+                            align-content: center;
+                            background-image: url(../../assets/icon/search.svg);
+                        }
+                    }
+                }
+                .bottom
+                {
+                    position: relative;
+                    
+                    .rocket
+                    {
+                        position: absolute;
+                        display:inline-block;
+                        width:91px;
+                        height:100%;
+                       
+                        .box{
+                            position: inherit;
+                            left:14px;
+                            top:6px;
+                            width:63px;
+                            height: 14px;
+                            
+                            .des{
+                                margin:0px;
+                                display:inline-block;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                    .rocket-fresh
+                    {
+                        position: absolute;
+                        display:inline-block;
+                        left:91px;
+                        width:91px;
+                        height:100%;
+                        
+                        .box{
+                            position: inherit;
+                            text-align: center;
+                            top:8px;
+                            width:100%;
+                            height: 14px;
+                            
+                            .des{
+                                margin:0px;
+                                display:inline-block;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                    .sulnal
+                    {
+                        position: absolute;
+                        display:inline-block;
+                        left:91+91px;
+                        width:91px;
+                        height:100%;
+                     
+                        .box{
+                            position: inherit;
+                            text-align: center;
+                            top:8px;
+                            width:100%;
+                            height: 14px;
+                            
+                            .des{
+                                margin:0px;
+                                display:inline-block;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                    .rocket-buy
+                    {
+                        position: absolute;
+                        display:inline-block;
+                        left:91+91+91px-3;
+                        width:73px;
+                        height:100%;
+                        
+                        .box{
+                            position: inherit;
+                            text-align: center;
+                            top:8px;
+                            width:100%;
+                            height: 14px;
+                            
+                            .des{
+                                margin:0px;
+                                display:inline-block;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                    .goldbox
+                    {
+                        position: absolute;
+                        display:inline-block;
+                        left:91+91+91+91-8px;
+                        width:73px;
+                        height:100%;
+                     
+                        .box{
+                            position: inherit;
+                            text-align: center;
+                            top:8px;
+                            width:100%;
+                            height: 14px;
+                            
+                            .des{
+                                margin:0px;
+                                display:inline-block;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                    .regularly
+                    {
+                        position: absolute;
+                        display:inline-block;
+                        left:91+91+91+91+91-16px;
+                        width:73px;
+                        height:100%;
+                       
+                        .box{
+                            position: inherit;
+                            text-align: center;
+                            top:8px;
+                            width:100%;
+                            height: 14px;
+                            
+                            .des{
+                                margin:0px;
+                                display:inline-block;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                    .event
+                    {
+                        position: absolute;
+                        display:inline-block;
+                        left:91+91+91+91+91+91-24px;
+                        width:73px;
+                        height:100%;
+                       
+                        .box{
+                            position: inherit;
+                            text-align: center;
+                            top:8px;
+                            width:100%;
+                            height: 14px;
+                            
+                            .des{
+                                margin:0px;
+                                display:inline-block;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                    .gewhak
+                    {
+                        position: absolute;
+                        display:inline-block;
+                        left:91+91+91+91+91+91+91-32px;
+                        width:73px;
+                        height:100%;
+                        
+                        .box{
+                            position: inherit;
+                            text-align: center;
+                            top:8px;
+                            width:100%;
+                            height: 14px;
+                            
+                            .des{
+                                margin:0px;
+                                display:inline-block;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                    .ticket
+                    {
+                        position: absolute;
+                        display:inline-block;
+                        left:91+91+91+91+91+91+91+91-40px;
+                        width:73px;
+                        height:100%;
+                        
+                        .box{
+                            position: inherit;
+                            text-align: center;
+                            top:8px;
+                            width:100%;
+                            height: 14px;
+                            
+                            .des{
+                                margin:0px;
+                                display:inline-block;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                
+            }
+            
+            }
+            .body2
+            {
+                
+                .myCoupang 
+                {
+                    position: absolute;
+                    display: inline-block;
+                    left:900px;
+                    top:63-34px;
+                    width:90px;
+                    height:58px;
+                    
+                    .logo{
+                        position: inherit;
+                        left:24.5px;
+                        width:40px;
+                        height:40px;
+                        background-size: cover;
+                        background-position: center;
+                        background-color: white;
+                        border:0px;
+                        background-image: url(../../assets/icon/my-coupang.svg);
+                    }
+                    .mycp
+                    {
+                        position: inherit;
+                        left:24.5px;
+                        top:40px;
+                        padding: 0px;
+                       
+                        font-size:12px;
+                    }
+                    .links
+                    {
+                        position: inherit;
+                        left:-10px;
+                        top:50px;
+                        width:70px;
+                        height:100px;
+                        
+                        border:1px solid red;
+                        li
+                        {
+                            list-style: none;
+                            text-align: center;
+                        }
+                        .list
+                        {
+                            position: absolute;
+                            left:6px;
+                            top:13px;
+                            width:80%;
+                            
+                            height:20%;
+                            
+                            .des{
+                                
+                                font-size:3px;
+                                padding:0px;
+                            }
+                        }
+                        .cancel
+                        {
+                            position: absolute;
+                            left:6px;
+                            top:43px;
+                            width:80%;
+                            
+                            height:20%;
+                            
+                            .des{
+                                
+                                font-size:3px;
+                                padding:0px;
+                            }
+                        }
+                        .jjim
+                        {
+                            position: absolute;
+                            left:6px;
+                            top:73px;
+                            width:80%;
+                            
+                            height:20%;
+                            
+                            .des{
+                                
+                                font-size:3px;
+                                padding:0px;
+                            }
+                        }
+
+                    }
+                }
+                .cart
+                {
+                    position: absolute;
+                    left:970px;
+                    top:30px;
+                    width:90px;
+                    height:58px;
+                    
+                    .logo
+                    {
+                        width:40px;
+                        border:0px;
+                        height:40px;
+                        position: inherit;
+                        left:10px;
+                        background-size: cover;
+                        background-color: white;
+                        background-position: center;
+                        background-image: url(../../assets/icon/cart.svg);
+                    }
+                    .basket
+                    {
+                        position: inherit;
+                        left:10px;
+                        top:40px;
+                        padding: 0px;
+                       
+                        font-size:12px;
+                    }
+                    .circle
+                    {
+                        position: inherit;
+                        left:35px;
+                        width:18px;
+                        height:18px;
+                        border-radius: 100%;
+                        background-color: #0074E9;
+                        z-index:3;
+                        .num
+                        {
+                            position: relative;
+                            top:1.5px;
+                            font-size:12px;
+                            color:white;
+                            text-align: center;
+                        }
+                    }
+                    .cart-list
+                    {
+                        position: inherit;
+                        left:-100px;
+                        top:60px;
+                        width:200px;
+                        height:100px;
+                        border:1px solid blue;
+                       
+                        .alert
+                        {
+                            position: inherit;
+                            top:40px;
+                            left:10px;
+                            font-size:12px;
+                            padding:0px;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+}

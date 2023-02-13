@@ -1,0 +1,397 @@
+body
+{
+    position:relative;
+}
+p{
+    margin:0px;
+}
+.head
+{
+    
+    position:relative;
+    left:147px;
+    top: 100px;
+}
+#logo
+{
+    height:40px;
+    width:176px;
+}
+.main
+{
+    position:absolute;
+    left:145px;
+    top:188px;
+    width:1022px;
+    height:354px;
+    
+}
+
+.main .mainHead 
+{
+    position: absolute;
+    width:234px;
+    height:30px;
+    
+}
+.main .mainHead .suggest
+{
+    position: absolute;
+    left:30px;
+    top:1px;
+    width:168px;
+    height:28px;
+    font-size: 20px;
+   
+}
+.main .mainHead .cicon
+{
+    width:30px;
+    height:30px;
+   
+    background-image: url(../../assets/icon/shopping.svg);
+}
+.main .mainBody
+{
+    position: absolute;
+    display:flex;
+    align-items: center;
+    left:2px;
+    top:54px;
+    flex:1;
+    width:1020px;
+    height:270px;
+    
+}
+.bodySet
+{
+    width:200px;
+    height:270px;
+    margin-right:5px;   
+}
+
+
+
+
+.main .mainBody .assests1 .imgg
+{
+    position: relative;
+    
+    top:14px;
+    left:20px;
+    width:160px;
+    height:160px;
+   
+    
+}
+.main .mainBody .assests2 .imgg
+{
+    position: relative;
+    
+    top:14px;
+    left:20px;
+    width:160px;
+    height:160px;
+
+   
+}
+.main .mainBody .assests3 .imgg
+{
+    position: relative;
+
+    top:14px;
+    left:20px;
+    width:160px;
+    height:160px;
+  
+ 
+}
+.main .mainBody .assests4 .imgg
+{
+    position: relative;
+  
+    top:14px;
+    left:20px;
+    width:160px;
+    height:160px;
+
+  
+}
+.main .mainBody .assests5 .imgg
+{
+    position:relative;
+    
+    top:14px;
+    left:20px;
+    width:160px;
+    height:160px;
+    
+  
+}
+
+.main .mainBody .assests1  .assests-info
+{
+    position: relative;
+    left:14px;
+    top:30px;
+    width:172px;
+    height:46px;
+   
+}
+.main .mainBody .assests2 .assests-info
+{
+    position: relative;
+    left:14px;
+    top:30px;
+    width:172px;
+    height:67px;
+   
+}
+.main .mainBody .assests3  .assests-info
+{
+    position: relative;
+    left:14px;
+    top:30px;
+    width:172px;
+    height:67px;
+    
+}
+.main .mainBody .assests4  .assests-info
+{
+    position: relative;
+    left:14px;
+    top:30px;
+    width:172px;
+    height:67px;
+   
+}
+.main .mainBody .assests5 .assests-info
+{
+    position: relative;
+    left:14px;
+    top:30px;
+    width:172px;
+    height:67px;
+   
+}
+.main .mainBody .assests1  .assests-info .img-descript
+{
+    margin:0px;
+    position: relative;
+    width:172px;
+    height:17px;
+    font-size:14px;
+    
+}
+
+.main .mainBody .assests2 .assests-info .img-descript
+{
+    margin:0px;
+    position: relative;
+    width:172px;
+    height:17px;
+    font-size:14px;
+    
+}
+.main .mainBody .assests3  .assests-info .img-descript
+{
+    margin:0px;
+    position: relative;
+    width:172px;
+    height:17px;
+    font-size:14px;
+    
+}
+.main .mainBody .assests4  .assests-info .img-descript
+{
+    margin:0px;
+    position: relative;
+    width:172px;
+    height:17px;
+    font-size:14px;
+    
+}
+.main .mainBody .assests5  .assests-info .img-descript
+{
+    margin:0px;
+    position: relative;
+    width:172px;
+    height:17px;
+    font-size:14px;
+    
+}
+
+.main .mainBody .assests1  .assests-info .star
+{
+    position: absolute;
+    display:inline-block;
+    top:29px;
+    width:68px;
+    height:12px;
+    background:url(../../assets/sprites/rating-stars.png) no-repeat ;
+    background-position:10% 90%; 
+}
+.main .mainBody .assests2  .assests-info .star
+{
+    position: absolute;
+    display:inline-block;
+    bottom:3px;
+    width:68px;
+    height:12px;
+    background:url(../../assets/sprites/rating-stars.png) no-repeat ;
+    background-position:10% 90%; 
+}
+.main .mainBody .assests3  .assests-info .star
+{
+    position: absolute;
+    display:inline-block;
+    bottom:3px;
+    width:68px;
+    height:12px;
+    background:url(../../assets/sprites/rating-stars.png) no-repeat ;
+    background-position:10% 80%; 
+}
+
+.main .mainBody .assests4  .assests-info .star
+{
+    position: absolute;
+    display:inline-block;
+    bottom:3px;
+    width:68px;
+    height:12px;
+    background:url(../../assets/sprites/rating-stars.png) no-repeat bottom;
+    
+}
+.main .mainBody .assests5  .assests-info .star
+{
+    position: absolute;
+    display:inline-block;
+    bottom:3px;
+    width:68px;
+    height:12px;
+    background:url(../../assets/sprites/rating-stars.png) no-repeat ;
+    background-position:10% 80%; 
+}
+
+.discount-box
+{
+    position:absolute;
+    border:1px solid blue;
+    height:30px;
+    width:53px;
+    background-color: #E52330;
+    z-index:1;
+
+}
+.discount-box .discount
+{
+    margin-top:4px;
+    text-align:center;
+    font-size:16px;
+    color:#FFFFFF;
+}
+.main .mainBody .assests2 .assests-info .ship-info
+{
+    position:absolute;
+    top:29px;
+    width:55px;
+    height:16px;
+    background: url(../../assets/icon/badge-rocket.svg) no-repeat;
+}
+.main .mainBody .assests3 .assests-info .ship-info
+{
+    position:absolute;
+    
+    top:29px;
+    width:55px;
+    height:16px;
+    color:#767676;
+    font-size:14px;
+}
+.main .mainBody .assests4 .assests-info .ship-info
+{
+    position:absolute;
+    top:29px;
+    width:55px;
+    height:16px;
+    background: url(../../assets/icon/badge-rocket.svg) no-repeat;
+}
+.main .mainBody .assests5 .assests-info .ship-info
+{
+    position:absolute;
+    top:29px;
+    width:55px;
+    color:#767676;
+    height:16px;
+    font-size:14px;
+}
+.main .mainBody .assests2 .assests-info .review
+{
+    position:absolute;
+    height:17px;
+    width:45px;
+    bottom:0px;
+    left:72px;
+    
+}
+.main .mainBody .assests2 .assests-info .review .review-count
+{
+    color:#767676;
+    font-size:14px;
+}
+.main .mainBody .assests3 .assests-info .review
+{
+    position:absolute;
+    height:17px;
+    width:45px;
+    bottom:0px;
+    left:72px;
+    
+}
+.main .mainBody .assests3 .assests-info .review .review-count
+{
+    color:#767676;
+    font-size:14px;
+}
+.main .mainBody .assests4 .assests-info .review
+{
+    position:absolute;
+    height:17px;
+    width:45px;
+    bottom:0px;
+    left:72px;
+    
+}
+.main .mainBody .assests4 .assests-info .review .review-count
+{
+    color:#767676;
+    font-size:14px;
+}
+.main .mainBody .assests5 .assests-info .review
+{
+    position:absolute;
+    height:17px;
+    width:45px;
+    bottom:0px;
+    left:72px;
+    
+}
+.main .mainBody .assests5 .assests-info .review .review-count
+{
+    color:#767676;
+    font-size:14px;
+}
+.main .mainBody .assests1 .assests-info .review
+{
+    position:absolute;
+    height:17px;
+    width:45px;
+    bottom:0px;
+    left:72px;
+    
+}
+.main .mainBody .assests1 .assests-info .review .review-count
+{
+    color:#767676;
+    font-size:14px;
+}

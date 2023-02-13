@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>Zero base Event Delegation</title>
+		<meta charset="utf-8" />
+		<style>
+			body {
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			body * {
+				margin: 20px;
+				border: 2px solid red;
+			}
+
+			body * > * {
+				border-color: orange;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>장바구니</h1>
+		<ul>
+			<li class="item">노트북</li>
+			<li class="item">모니터</li>
+			<li class="item">책상</li>
+			<li class="item">의자</li>
+			<li class="item">키보드</li>
+			<li class="item">마우스</li>
+			<li class="item aaa bbb ccc">마우스</li>
+		</ul>
+	</body>
+	<script>
+		const items = document.querySelector('ul');
+
+		items.addEventListener('click', (event) => {
+			// const item = event.target.classList[0];
+			const [item] = event.target.classList;
+
+			console.dir(event.target.classList);
+
+			// if (event.target.nodeName !== 'LI') {
+			// 	return;
+			// }
+			if (item === 'item') {
+				event.target.style.background = 'blue';
+			}
+		});
+	</script>
+</html>

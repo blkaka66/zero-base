@@ -2,17 +2,20 @@
     padding: 28px $m-padding 10px;
     background-color: #fff;
 
+    //새로나온 메뉴나 인기메뉴 아니면 위에 여백
     &:not(.new):not(.popular) {
         margin-top: 10px;
     }
 
+    //새로나온 메뉴 밑에 밑줄
     &.new {
         border-bottom: 1px solid $booking-color-border144;
     }
 
+    //닫힐때
     &.is-closed {
         padding: 24px $m-padding;
-
+        //닫힌메뉴가 연달아 2개일때 여백이사라지고 위에 줄그어짐
         & + .is-closed {
             margin-top: 0;
             border-top: 1px solid $booking-color-border144;

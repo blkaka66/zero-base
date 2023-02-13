@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>헤더 - 쿠팡(Coupang)</title>
+  <link rel="icon" href="/assets/favicon/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Mission-04/stylesheets/main.css" />
+  <script src="/js/main.js" defer></script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="head">
+      <div class="head-main">
+        <ul>
+          <li><p class="logon">로그인</p></li>
+          <li ><p class="signup" >회원가입</p></li>
+          <li ><p class="center">고객센터</p></li>
+          <li ><p class="play">쿠팡플레이</p></li>
+          <li ><p class="marketing">제휴마케팅</p></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 여기서부터 body -->
+    <div class="main-body">
+      <div class="body">
+        <button class="button--category">
+          <img src="../Mission-04/assets/icon/hamburger.svg" style=margin-bottom:16px; alt="">
+          <p class="des">카테고리</p>
+        </button>
+        <div class="body1">
+          <div class="up">
+            <div class="logo">
+              <a href="https://www.coupang.com/" target="_blank">
+                <img class="a" src="../Mission-04/assets/logo/logo.svg" alt="coupang">
+              </a>
+              <div class="search-box">
+                <select class="first" pl >
+                  <option value="a" ><p >전체</p></option>
+                  
+                </select>
+                <div class="second">
+                  <input class=search type="text" placeholder="찾고 싶은 상품을 검색해 보세요!">
+                </div>
+                <button class="third">
+                  
+                </button>
+                <div class="forth"></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="bottom">
+            <div class="rocket">
+              <div class="box">
+                <img class="ig" src="../Mission-04/assets/icon/icon-rocket.svg" alt="">
+                <p class="des">로켓배송</p>
+              </div>
+            </div>
+            <div class="rocket-fresh">
+              <div class="box">
+                <img class="ig" src="../Mission-04/assets/icon/icon-fresh.svg" alt="">
+                <p class="des">로켓프레시</p>
+              </div>
+            </div>
+            <div class="sulnal">
+              <div class="box">
+                <p class="des">2022년 설날</p>
+                <img class="ig" src="../Mission-04/assets/icon/new.svg" alt="">
+              </div>
+            </div>
+            <div class="rocket-buy">
+              <div class="box">
+                <p class="des">로켓직구</p>
+              </div>
+            </div>
+            <div class="goldbox">
+              <div class="box">
+                <p class="des">골드박스</p>
+              </div>
+            </div>
+            <div class="regularly">
+              <div class="box">
+                <p class="des">정기배송</p>
+              </div>
+            </div>
+            <div class="event">
+              <div class="box">
+                <p class="des">이벤트/쿠폰</p>
+              </div>
+            </div>
+            <div class="gewhak">
+              <div class="box">
+                <p class="des">기획전</p>
+              </div>
+            </div>
+            <div class="ticket">
+              <div class="box">
+                <p class="des">여행티켓</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="body2">
+          <a href="javascript:isIn();">
+            <div class="myCoupang">
+              <button class="logo">
+              </button>
+              <p class="mycp">마이쿠팡</p>
+              <ul class="links">
+                
+                <a href="/">
+                <li class="list">
+                  <p class="des">주문목록</p>
+                </li>
+                </a>
+
+                <a href="/">
+                <li class="cancel">
+                  <p class="des">취소/반품</p>
+                </li>
+                </a>
+
+                <a href="/">
+                <li class="jjim">
+                  <p class="des">찜리스트</p>
+                </li>
+                </a>  
+               
+              </ul>
+            </div>
+            <div class="cart">
+              <button class="logo">
+              </button>
+              <p class="basket">장바구니</p>
+              <div class="circle">
+                <p class="num">0</p>
+              </div>
+              <div class="cart-list">
+                <p class="alert">장바구니에 담긴 상품이 없습니다.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+</body>
+
+<script>
+  function isIn()
+  {
+    var con=document.getElementsByClassName('links');
+    if (document.getElementsByClassName('is--active').length) 
+    {
+      con.style.display = 'block'; 
+    } 
+    else 
+    {
+      con.style.display='none';
+    }
+
+  }
+  function isCartEmpty()
+  {
+    var con=document.getElementsByClassName('cart-list');
+    if (document.getElementsByClassName('cart--empty').length) 
+    {
+      con.style.display = 'block'; 
+    } 
+    else 
+    {
+      con.style.display='none';
+    }
+  }
+ 
+</script>
+
+</html>

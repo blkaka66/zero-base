@@ -1,0 +1,1117 @@
+
+.head
+{
+    
+    position:relative;
+    left:139px;
+    top: 100px;
+    
+    
+    .logo
+    {
+        
+        align-content: center;
+        width:246px;
+        height:56px;
+    }
+}
+
+.main-body
+{
+    position:relative;
+    left:130px;
+    top: 204px;
+    width:1020px;
+    height:1376px;
+    
+    .bodyHead
+    {
+        position: absolute;
+        width:260px;
+        height:46px;
+        .hot
+        {
+            margin:0px;
+            font-weight: normal;
+            font-size:16px;
+        }
+        .descript
+        {
+            margin:0px;
+            font-size:24px;
+        }
+        
+    }
+    .livingProduct
+    {
+        position:absolute;
+        left:-2px;
+        top: 70px;
+        width:1022px;
+        height:634px;
+        border-top:1.17px solid #9D7A6D;
+        border-bottom:1.17px solid #9D7A6D;
+        display:flex;
+        .body1
+        {
+            flex-grow:1;
+         
+            
+            
+                
+                .title
+                {
+                    position: absolute;
+                    top:48px;
+                    left:24px;
+                    width:89px;
+                    height:28px;
+                    
+                    .name
+                    {
+                        margin:0px;
+                        font-weight: normal;
+                        font-size:24px;
+                        color:#9D7A6D;
+                    }
+                    .name-link
+                    {
+                        position: absolute;
+                        margin-top:8px;
+                        font-size:14px;
+                        font-weight: bold;
+                        color:#767676;
+                        &:after 
+                        {
+                            content:">";
+                            color: #929292;
+                            margin-left:4px;
+                            width:6px;
+                            height:10px;
+                        }
+                        
+                    }
+                    
+                    
+                    
+                }
+                .title2
+                {
+                    position: absolute;
+                    width:87px;
+                    height:21px;
+                    top:349px;
+                    left:24px;
+                    .hot-keyword
+                    {
+                        margin:0px;
+                        color:black;
+                        font-size:18px;
+                        font-weight:normal;
+                    }
+                }
+                .buttons
+                {
+                    position: absolute;
+                    left:24px;
+                    top:382px;
+                    width:124px;
+                    height:220px;
+                    
+                        
+                    .hash
+                    {
+                        height:26px;
+                        display:inline-block;
+                        margin-top:0px;
+                        padding:6px 3px;
+                        font-size:12px;
+                        font-weight:normal;
+                        color:#9D7A6D;
+                        border:1px solid #C4C4C4;
+                    }
+                    
+                    
+                }
+        }
+           
+                
+            
+        
+        .body2
+        {
+            width:320px;
+            position: relative;
+            .downy
+            {
+                height:100%;
+            }
+            .product-des
+            {
+                position: absolute;
+                top:483px;
+                left:30px;
+                width:260px;
+                height:90px;
+                background-color:#9D7A6D;
+                z-index:100;
+               
+                .des1
+                {
+                   
+                    position: inherit;
+                    
+                    top:19px;
+                    left:28px;
+                    width:205px;
+                    height:24px;
+                    text-align: center;
+                    .a{
+                        margin:0;
+                        color:#FFFFFF;
+                        font-size:18px;
+                        font-weight: bold;
+                        
+                    }
+                }
+                .des2
+                {
+                    position: inherit;
+                    top:51px;
+                    left:23px;
+                    width:215px;
+                    height:19px;
+                    text-align: center;
+                    .b{
+                        margin:0;
+                        color:#FFFFFF;
+                        font-size:14px;
+                        font-weight: normal;
+                    }
+                }
+            }
+            .circle
+            {
+                position: absolute;
+                
+                left:144px;
+                top:597px;
+                width:32px;
+                height:12px;
+                display:flex;
+                justify-content: space-between;
+                .first
+                {
+                    
+                    width:12px;
+                    height:12px;
+                    border-radius: 100%;
+                    background-color: #767676;
+                    display:inline-block;
+                }
+                .second
+                {
+                    left:20px;
+                    width:12px;
+                    height:12px;
+                    border-radius: 100%;
+                    background-color: #AAA9A9;
+                    
+                }
+                
+            }
+            
+        }
+        .body3
+        {
+            width:528px;
+            position:relative;
+            
+            .body3-top1
+            {
+                position: absolute;
+                top:9px;
+                left:13px;
+                width:160px;
+                height:300px;
+               
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                        position: absolute;
+                        top:46px;
+                        .pr
+                        {
+                            margin:0px;
+                            display:inline-block;
+                            font-size:18px;
+                            font-weight: bold;
+                        }
+                        .pr2
+                        {
+                            margin:0px;
+                            display:inline-block;
+                            font-size:14px;
+                            font-weight: normal;
+                        }
+                   }
+                }
+            }
+        }
+            .body3-top2
+            {
+                
+                position: absolute;
+                top:9px;
+                left:160+13+16px;
+                
+                width:160px;
+                height:300px;
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                    position: absolute;
+                    top:63px;
+                    .pr
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:18px;
+                        font-weight: bold;
+                    }
+                    .pr2
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:14px;
+                        font-weight: normal;
+
+                       
+                    }
+                    
+                   }
+                }
+                
+            }
+            .body3-top3
+            {
+                
+                position: absolute;
+                top:9px;
+                left:320+13+16+16px;
+                
+                width:160px;
+                height:300px;
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                    position: absolute;
+                    top:48px;
+                    .discount
+                    {
+                        margin:0px;
+                        margin-bottom:4px;
+                        font-size:14px;
+                        font-weight: normal;
+                        color:#E52330;
+                    }
+                    .pr
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:18px;
+                        font-weight: bold;
+                    }
+                    .pr2
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:14px;
+                        font-weight: normal;
+
+                       
+                    }
+                    
+                   }
+                }
+                &:after
+                {
+                    position: inherit;
+                    content:"";
+                    top:316.53-9px;
+                    left:-365px;
+                    width:528px;
+                    height:0.5px;
+                    background-color:#AAA9A9;
+                    z-index:33;
+                }
+                
+            }
+
+            .body3-bottom1
+            {
+                position: absolute;
+                top:325-5px;
+                left:13px;
+                width:160px;
+                height:300px;
+               
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                    position: absolute;
+                    top:48px;
+                    .discount
+                    {
+                        margin:0px;
+                        margin-bottom:4px;
+                        font-size:14px;
+                        font-weight: normal;
+                        color:#E52330;
+                    }
+                    .pr
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:18px;
+                        font-weight: bold;
+                    }
+                    .pr2
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:14px;
+                        font-weight: normal;
+
+                       
+                    }
+                    
+                   }
+                }
+            }
+            .body3-bottom2
+            {
+                
+                position: absolute;
+                top:325-5px;
+                left:160+13+16px;
+                
+                width:160px;
+                height:300px;
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                    position: absolute;
+                    top:46px;
+                    .pr
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:18px;
+                        font-weight: bold;
+                    }
+                    .pr2
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:14px;
+                        font-weight: normal;
+                    }
+                   }
+                }
+                
+            }
+            .body3-bottom3
+            {
+                
+                position: absolute;
+                top:325-5px;
+                left:320+13+16+16px;
+                
+                width:160px;
+                height:300px;
+                
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                    position: absolute;
+                    top:63px;
+                    .pr
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:18px;
+                        font-weight: bold;
+                    }
+                    .pr2
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:14px;
+                        font-weight: normal;
+
+                       
+                    }
+                    
+                   }
+                }
+                
+         }
+    }
+    // kitchen product
+         .kitchen-product
+         {
+            position:absolute;
+        left:-2px;
+        top: 728px;
+        width:1022px;
+        height:634px;
+        border-top:1.17px solid #00B599;;
+        border-bottom:1.17px solid #00B599;;
+        display:flex;
+        .body1
+        {
+            flex-grow:1;
+         
+            
+            
+                
+                .title
+                {
+                    position: absolute;
+                    top:48px;
+                    left:24px;
+                    width:89px;
+                    height:28px;
+                    
+                    .name
+                    {
+                        margin:0px;
+                        font-weight: normal;
+                        font-size:24px;
+                        color:#00B599;
+                    }
+                    .name-link
+                    {
+                        position: absolute;
+                        margin-top:8px;
+                        font-size:14px;
+                        font-weight: bold;
+                        color:#767676;
+                        &:after 
+                        {
+                            content:">";
+                            color: #929292;
+                            margin-left:4px;
+                            width:6px;
+                            height:10px;
+                        }
+                        
+                    }
+                    
+                    
+                    
+                }
+                .title2
+                {
+                    position: absolute;
+                    width:87px;
+                    height:21px;
+                    top:349px;
+                    left:24px;
+                    .hot-keyword
+                    {
+                        margin:0px;
+                        color:black;
+                        font-size:18px;
+                        font-weight:normal;
+                    }
+                }
+                .buttons
+                {
+                    position: absolute;
+                    left:24px;
+                    top:382px;
+                    width:124px;
+                    height:220px;
+                    
+                        
+                    .hash
+                    {
+                        height:26px;
+                        display:inline-block;
+                        margin-top:0px;
+                        padding:6px 3px;
+                        font-size:12px;
+                        font-weight:normal;
+                        color:#00B599;
+                        border:1px solid #C4C4C4;
+                    }
+                    
+                    
+                }
+        }
+           
+                
+            
+        
+        .body2
+        {
+            width:320px;
+            position: relative;
+            .downy
+            {
+                height:100%;
+            }
+            .product-des
+            {
+                position: absolute;
+                top:483px;
+                left:30px;
+                width:260px;
+                height:90px;
+                background-color:#00B599;
+                z-index:100;
+               
+                .des1
+                {
+                   
+                    position: inherit;
+                    
+                    top:19px;
+                    left:28px;
+                    width:205px;
+                    height:24px;
+                    text-align: center;
+                    .a{
+                        margin:0;
+                        color:#FFFFFF;
+                        font-size:18px;
+                        font-weight: bold;
+                        
+                    }
+                }
+                .des2
+                {
+                    position: inherit;
+                    top:51px;
+                    left:23px;
+                    width:215px;
+                    height:19px;
+                    text-align: center;
+                    .b{
+                        margin:0;
+                        color:#FFFFFF;
+                        font-size:14px;
+                        font-weight: normal;
+                    }
+                }
+            }
+            .circle
+            {
+                position: absolute;
+                
+                left:144px;
+                top:597px;
+                width:32px;
+                height:12px;
+                display:flex;
+                justify-content: space-between;
+                .first
+                {
+                    
+                    width:12px;
+                    height:12px;
+                    border-radius: 100%;
+                    background-color: #767676;
+                    display:inline-block;
+                }
+                .second
+                {
+                    left:20px;
+                    width:12px;
+                    height:12px;
+                    border-radius: 100%;
+                    background-color: #AAA9A9;
+                    
+                }
+                
+            }
+            
+        }
+        .body3
+        {
+            width:528px;
+            position:relative;
+            
+            .body3-top1
+            {
+                position: absolute;
+                top:9px;
+                left:13px;
+                width:160px;
+                height:300px;
+               
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                    .price
+                    {
+                     position: absolute;
+                     top:48px;
+                     .discount
+                     {
+                         margin:0px;
+                         margin-bottom:4px;
+                         font-size:14px;
+                         font-weight: normal;
+                         color:#E52330;
+                     }
+                     .pr
+                     {
+                         margin:0px;
+                         display:inline-block;
+                         font-size:18px;
+                         font-weight: bold;
+                     }
+                     .pr2
+                     {
+                         margin:0px;
+                         display:inline-block;
+                         font-size:14px;
+                         font-weight: normal;
+ 
+                        
+                     }
+                     
+                    }
+                }
+            }
+        }
+            .body3-top2
+            {
+                
+                position: absolute;
+                top:9px;
+                left:160+13+16px;
+                
+                width:160px;
+                height:300px;
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                    position: absolute;
+                    top:63px;
+                    .pr
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:18px;
+                        font-weight: bold;
+                    }
+                    .pr2
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:14px;
+                        font-weight: normal;
+
+                       
+                    }
+                    
+                   }
+                }
+                
+            }
+            .body3-top3
+            {
+                
+                position: absolute;
+                top:9px;
+                left:320+13+16+16px;
+                
+                width:160px;
+                height:300px;
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                    position: absolute;
+                    top:48px;
+                    .discount
+                    {
+                        margin:0px;
+                        margin-bottom:4px;
+                        font-size:14px;
+                        font-weight: normal;
+                        color:#E52330;
+                    }
+                    .pr
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:18px;
+                        font-weight: bold;
+                    }
+                    .pr2
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:14px;
+                        font-weight: normal;
+
+                       
+                    }
+                    
+                   }
+                }
+                &:after
+                {
+                    position: inherit;
+                    content:"";
+                    top:316.53-9px;
+                    left:-365px;
+                    width:528px;
+                    height:0.5px;
+                    background-color:#AAA9A9;
+                    z-index:33;
+                }
+                
+            }
+
+            .body3-bottom1
+            {
+                position: absolute;
+                top:325-5px;
+                left:13px;
+                width:160px;
+                height:300px;
+               
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                    position: absolute;
+                    top:48px;
+                    .discount
+                    {
+                        margin:0px;
+                        margin-bottom:4px;
+                        font-size:14px;
+                        font-weight: normal;
+                        color:#E52330;
+                    }
+                    .pr
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:18px;
+                        font-weight: bold;
+                    }
+                    .pr2
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:14px;
+                        font-weight: normal;
+
+                       
+                    }
+                    
+                   }
+                }
+            }
+            .body3-bottom2
+            {
+                
+                position: absolute;
+                top:325-5px;
+                left:160+13+16px;
+                
+                width:160px;
+                height:300px;
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                    position: absolute;
+                    top:46px;
+                    .pr
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:18px;
+                        font-weight: bold;
+                    }
+                    .pr2
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:14px;
+                        font-weight: normal;
+                    }
+                   }
+                }
+                
+            }
+            .body3-bottom3
+            {
+                
+                position: absolute;
+                top:325-5px;
+                left:320+13+16+16px;
+                
+                width:160px;
+                height:300px;
+                
+                .img-div
+                {
+                    width:160px;
+                    height:160px;
+                }
+                .img-des
+                {
+                    position: inherit;
+                    left:4px;
+                    top:172px;
+                    width:152px;
+                    height:73px;
+                   .des
+                   {
+                        margin:0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                   .price
+                   {
+                    position: absolute;
+                    top:63px;
+                    .discount
+                    {
+                        margin:0px;
+                        margin-bottom:4px;
+                        font-size:14px;
+                        font-weight: normal;
+                        color:#E52330;
+                    }
+                    .pr
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:18px;
+                        font-weight: bold;
+                    }
+                    .pr2
+                    {
+                        margin:0px;
+                        display:inline-block;
+                        font-size:14px;
+                        font-weight: normal;
+
+                       
+                    }
+                    
+                   }
+                }
+                
+         }
+    }
+}           
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+

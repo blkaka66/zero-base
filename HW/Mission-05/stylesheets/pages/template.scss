@@ -1,0 +1,414 @@
+p{
+    margin:0px;
+}
+.hidden,
+[hidden] {
+    display: none !important;
+}
+.header
+{
+    width:1920px;
+    height:117px;
+    border-bottom:1px solid #F3F3F3;
+    position: relative;
+    .header__inner
+    {
+        position: absolute;
+        .button--category
+        {
+            position: inherit;
+            left:450px;
+            background-color: #0074E9;
+            width:110px;
+            height:116px;
+            border:0px;
+            .des
+            {
+                font-size:12px;
+                color: #ffffff;
+            }
+        }
+    }
+}
+/* ---------------------------------------------- */
+
+
+/* ---------------------------------------------- */
+.navigation
+{
+    position: relative;
+    left:450px;
+    top:117px;
+    width:1020px;
+    height:520px;
+   
+    
+   
+    .navigation__inner
+    {
+        position: absolute;
+        left:0px;
+        top:0px;
+        width:540px;
+        height:500px;
+        border:1px solid red;
+        ul
+        {
+            list-style: none;
+            margin:0px;
+            padding:0px;
+            
+        
+            ul > li
+            {
+                padding-left:20px;
+                padding-top:10px;
+            }
+            
+            
+        }
+        .navigation__list
+        {
+            width:100%;
+            height:100%;
+            
+            .box
+            {
+                width:170px;
+                height:30px;
+                .box-des
+                {
+                    font-size:12px;
+                    margin-top:8px;
+                }
+                :first-of-type
+                { 
+                    .trangle
+                    {
+                        position: absolute;
+                        width: 9px;
+                        height: 6px;
+                        left:150px;
+                        top:18px;
+    
+                        /* blue/600 */
+    
+                        color: #0074E9;
+                        
+                    }
+                }
+               
+            }
+
+            .nav1
+            {
+                width:180px;
+                height:500px;
+                border:1px solid red;
+                
+            }
+            .nav2
+            {
+                margin-top:-451px;
+                margin-left:180px;
+                width:180px;
+                height:500px;
+                border:1px solid black;
+            }
+            .nav3
+            {
+                margin-top:-93px;
+                margin-left:180px;
+                width:180px;
+                height:500px;
+                border:1px solid blue;
+            }
+        }
+    }
+    
+}
+/* ---------------------------------------------- */
+
+
+/* ---------------------------------------------- */
+/* 메인 콘텐츠                                       */
+/* ---------------------------------------------- */
+/* 메인 콘텐츠 영역의 최소 높이 설정 */
+.main{
+    min-height: 52rem;
+  }
+  
+  
+  /* ---------------------------------------------- */
+.footer
+{
+    position: relative;
+    
+    width:1920px;
+    height:349px;
+    
+    .footer-head
+    {
+        position: absolute;
+        height:40px;
+        width:100%;
+        background-color: #E7E7E7;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        .info
+        {
+            margin-left:4px;
+            margin-right:4px;
+            color:#4E4E4E;
+            font-size:12px;
+            
+        }
+        .divider
+        {
+            
+            margin-left:4px;
+            margin-right:4px;
+            color:#4E4E4E;
+            
+        }
+    }
+    .footer-body
+    {
+        position: absolute;
+        top:40px;
+        width:100%;
+        height:207px;
+        border:1px solid gray;
+        
+        flex-direction: row;
+        .footer-body-main
+        {
+            position: inherit;
+            left:360px;
+            top:32px;
+            width:1200px;
+            height:143px;
+            
+            display:flex;
+            
+            .main-logo
+            {
+                position: relative;
+                width:176px;
+                height: 40px;
+                background-image: url(../../assets/logo/logo-mono.svg);
+                background-size: cover;
+                background-repeat: none;
+                .cou
+                {
+                    font-size:0px;
+                }
+            }
+            .company-info
+            {
+                position: absolute;
+                left:239px;
+                width:260px;
+                height:143px;
+                
+                .company-info-text
+                {
+                    margin-top:12px;
+                    
+                    font-size:16px;
+                    color:#4E4E4E;
+                    &:nth-of-type(1)
+                    {
+                        width:280px;
+                        margin-top:0px;
+                    }
+                }
+                
+            }
+            .company-num
+            {
+                position: absolute;
+                left:561px;
+                width:293px;
+                height:143px;
+                .company-num-first
+                {
+                    
+                    width:293px;
+                    height:19px;
+                    .fir
+                    {
+                        font-size:16px;
+                        color:#4E4E4E;
+                        &:nth-of-type(1)
+                        {
+                            font-weight: bold;
+                        }
+                    }
+                    .company-num-divider{
+                        display:inline-block;
+                       
+                        height:12px;
+                        color:#4E4E4E;
+                    }
+                }
+                .company-num-second
+                {
+                    
+                    
+                    margin-top:8px;
+                    width:260px;
+                    height:58px;
+                    
+                    
+                    .num{
+                        
+                        font-weight: bold;
+                        font-size:48px;
+                        color:#4E4E4E;
+                    }
+                    .call
+                    {
+                        
+                        z-index:300;
+                        width:500px;
+                        height:200px;
+                        display:flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .go-call
+                        {
+                            
+                            width:100%;
+                            height:30px;
+                            background-color:gray;
+                            text-align: center;
+                            border:1px solid black;
+                            border-radius: 5%;
+                            
+                            .option
+                            {
+                                text-align: center;
+                                font-size:20px;
+                                color:bLUE;
+                            }
+                        }
+                        .cancel
+                        {
+                            width:100%;
+                            height:30px;
+                            background-color:gray;
+                            text-align: center;
+                            border:1px solid black;
+                            border-radius: 5%;
+                            margin-top:10px;
+                            .option
+                            {
+                                font-size:20px;
+                                color:rgb(12, 135, 222);
+                            }
+                        }
+                    }
+                }
+                .company-num-third
+                {
+                    
+                    margin-top:8px;
+                    .address
+                    {
+                        font-size:  16px;
+                        color:#4E4E4E;
+                    }
+                }
+                .company-num-forth
+                {
+                    margin-top:8px;
+                   
+                    .email
+                    {
+                        font-size:  16px;
+                        color:#4E4E4E;
+                    }
+                }
+                
+            }
+            .warning
+            {
+                position: absolute;
+                left:916px;
+                width:282px;
+                height:84px;
+              
+                .first
+                {
+                    width:195px;
+                    height:19px;
+                    .info{
+                        font-size:  16px;
+                        color:#4E4E4E;
+                        font-weight: bold;
+                    }
+                    
+                }
+                .second{
+                    margin-top:8px;
+                    width:282px;
+                    height:57px;
+                    .info-second
+                    {
+                        font-size:  16px;
+                        color:#4E4E4E;
+                    }
+                }
+            }
+        }
+    }
+    .footer-footer
+    {
+        position: absolute;
+        top:247px;
+        width:100%;
+        height:102px;
+        background-color: #272727;;
+    }
+    .footer-footer-main
+    {
+        position: absolute;
+        top:16px;
+        left:450px;
+        width:1020px;
+        height:70px;
+       
+        display:flex;
+        
+        .main
+        {
+            color:#E7E7E7;
+            font-size:12px;
+            font-weight: lighter;
+            display:inline-flex;
+        }
+        .logos
+        {
+            position: inherit;
+            left:898px;
+            top:36px;
+            width:122px;
+            height:34px;
+            
+            display:flex;
+            justify-content: space-around;
+            .logo-foot{
+                .insta
+                {
+                    border-radius: 100%;
+                    background:linear-gradient(174.12deg, #285AEB 5.61%, #BC1888 22.32%, #CC2366 36.16%, #DC2743 51.91%, #E6683C 73.38%, #F09433 91.99%);
+                }
+               
+            }
+        }
+    }
+}
+  /* ---------------------------------------------- */
+  

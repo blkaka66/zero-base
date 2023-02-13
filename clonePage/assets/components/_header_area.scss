@@ -8,9 +8,11 @@
     z-index: 5000;
 
     .place-header {
+        //flex랑 center는 짝꿍
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        
         height: $place-header-height;
 
         .title {
