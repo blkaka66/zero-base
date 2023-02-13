@@ -45,7 +45,6 @@ p {
   top: 0px;
   width: 540px;
   height: 500px;
-  border: 1px solid red;
 }
 .navigation .navigation__inner ul {
   list-style: none;
@@ -68,33 +67,43 @@ p {
   font-size: 12px;
   margin-top: 8px;
 }
-.navigation .navigation__inner .navigation__list .box :first-of-type .trangle {
-  position: absolute;
-  width: 9px;
-  height: 6px;
-  left: 150px;
-  top: 18px;
-  /* blue/600 */
-  color: #0074E9;
-}
 .navigation .navigation__inner .navigation__list .nav1 {
   width: 180px;
   height: 500px;
-  border: 1px solid red;
+}
+.navigation .navigation__inner .navigation__list .nav1 .trangle {
+  position: absolute;
+  width: 9px;
+  height: 6px;
+  margin-left: 30px;
+  /* blue/600 */
+  color: #0074E9;
 }
 .navigation .navigation__inner .navigation__list .nav2 {
   margin-top: -451px;
   margin-left: 180px;
   width: 180px;
   height: 500px;
-  border: 1px solid black;
+}
+.navigation .navigation__inner .navigation__list .nav2 > li {
+  margin-left: 20px;
+}
+.navigation .navigation__inner .navigation__list .nav2 .trangle {
+  position: absolute;
+  width: 9px;
+  height: 6px;
+  margin-left: 70px;
+  /* blue/600 */
+  color: #0074E9;
 }
 .navigation .navigation__inner .navigation__list .nav3 {
   margin-top: -93px;
   margin-left: 180px;
   width: 180px;
   height: 500px;
-  border: 1px solid blue;
+}
+.navigation .navigation__inner .navigation__list .nav3 > li {
+  margin-left: 20px;
 }
 
 /* ---------------------------------------------- */

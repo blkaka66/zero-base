@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./input.txt">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        ARTICLE
+
+        <div>
+            DIV
+            <p>
+                P
+                <button>
+                    Button
+                </button>
+            </p>
+        </div>
+    </article>
+
+
+</body>
+<script>
+    const article = document.querySelector('article');
+    const division = document.querySelector('div');
+    const paragarph = document.querySelector('p');
+    const btn = document.querySelector('button');
+
+    
+    article.addEventListener('click' ,() =>window.alert('article'));
+    division.addEventListener('click' ,() =>window.alert('division'));
+    paragarph.addEventListener('click' ,() =>window.alert('paragarph'));
+    btn.addEventListener('click' ,() =>window.alert('btn'));
+</script>
+</html>
