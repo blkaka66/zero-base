@@ -7,13 +7,32 @@ function Train(number) {
 function LinkedList() {
   this.head = null;
 }
+LinkedList.prototype.isEmpty = function () {
+  return LinkedList.length === 0;
+};
+
+LinkedList.prototype.append = function (value) {
+  let ta = new Train(value);
+  let current =this.head;
+  if(this.isEmpty() === true){
+    this.head =ta;
+  }
+  else{
+    while(current.next !=null){
+      current= current.next;
+    }
+    current.next=ta;
+  }
+  ta.next = null;
+};
 
 function answer(nums) {
   let ll = new LinkedList();
+  ll.append(nums);
 
   // 코드 구현 시작 영역
-
-  // …
+  
+  
 
   // 코드 구현 종료 영역
 

@@ -1,0 +1,42 @@
+:root{
+    --height:300px;
+    --width:300px;
+}
+.calender 
+{
+    position: relative;
+    top:100px;
+    left:300px;
+    width:var(--height);
+    height:var(--width);
+    
+   
+    .calender-nav{
+        position: absolute;
+        width:calc(var(--width));
+        height:calc(var(--height)*0.3);
+        background-color: green;
+        border-radius: 11% 11% 0% 0%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        i
+        {
+            padding: 15px;
+        }
+    }
+    .calender-grid{
+        position: absolute;
+        top:calc(var(--width)*0.3);
+        width:calc(var(--width));
+        height:calc(var(--height)*0.7);
+        display:grid;
+        grid-template-columns: repeat(7,1fr);
+        grid-template-rows: repeat(7,1fr);
+        background-color: black;
+        border-radius: 0% 0% 8% 8%;
+        overflow: hidden;
+    }
+}

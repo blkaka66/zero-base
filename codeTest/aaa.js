@@ -1,56 +1,39 @@
 function solution(s) {
-    let arr=[...s];
-    let word=  divide(arr);
-    let res =  reverse(word);
-    return res;
-}
-function reverse (word){
-    let arr=[];
-    let res=[];
-   
-    for(let i=0;i<word.length;i++)
-    {
-       
-        for(let a =word[i].length-1; a>=0;a--)
-        {
-            arr.push(word[i][a]);
-        }
-        
-        arr= arr.join("");
-        res.push(arr);
-        arr=[];
-    }
-   
-    return res;
-}
+    let arr = [];
+    arr=[...s];
+   let countArr= setCount(arr);
+   let result = organize(countArr,arr);
+   console.log(result);
 
-function divide(arr){
-    let word=[];
-    let a=[];
+}
+function organize(countArr,arr){
+    let res =[];
+    for(let i=0;i<countArr.length;i++)
+    {
+        if(countArr[i] === 1)
+        {
+            res.push(arr[i]);
+        }
+    }
+    let result  = res.join("");
+    return result;
+}
+function setCount(arr){
+    let count=0;
+    let countArr=[];
+
     for(let i=0;i<arr.length;i++)
     {
-        
-        
-                if(arr[i]==="," || arr[i] === "." ||arr[i] === " "||arr[i]==="!"|| arr[i] ==="?"||i===(arr.length-1))
-                {
-                    
-                    
-                    if(a.length>0){ 
-                        word.push(a);
-                        
-                        a=[];
-                    }
-                   
-                }
-                
-                else{
-                   
-                    { a.push(arr[i]);}
-                   
-                }
+        for(let a =0;a<arr.length;a++)
+        {
+            if(arr[i] === arr[a])
+            {
+                count++;
             }
-            return word;
+        }
+        countArr.push(count);
+        count=0;
     }
-
-   
-
+    return countArr;
+}
+solution("abbc");

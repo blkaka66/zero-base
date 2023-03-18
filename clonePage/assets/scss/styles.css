@@ -87,16 +87,20 @@ textarea {
   font-size: inherit;
   border: 0;
 }
+input::-moz-placeholder, textarea::-moz-placeholder {
+  /* Chrome, Safari, Firefox */
+  color: #c9c9c9;
+  opacity: 1;
+}
 input::placeholder,
 textarea::placeholder {
   /* Chrome, Safari, Firefox */
   color: #c9c9c9;
   opacity: 1;
 }
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  /* IE, Edge */
-  color: #c9c9c9;
+input[readonly]::-moz-placeholder, input:disabled::-moz-placeholder, textarea[readonly]::-moz-placeholder, textarea:disabled::-moz-placeholder {
+  /* Chrome, Safari, Firefox */
+  color: rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
 input[readonly]::placeholder, input:disabled::placeholder,
@@ -148,7 +152,6 @@ textarea::-webkit-outer-spin-button {
 
 body.scroll-off {
   overflow: hidden;
-  -ms-touch-action: none;
   touch-action: none;
 }
 

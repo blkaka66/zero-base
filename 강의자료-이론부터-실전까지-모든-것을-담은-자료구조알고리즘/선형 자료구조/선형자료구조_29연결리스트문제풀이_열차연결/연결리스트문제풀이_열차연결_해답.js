@@ -17,15 +17,15 @@ function answer(nums) {
   // 2. 가장 첫번째 Train 객체는 this.head로 연결
   let current, prev;
   for (let i = 0; i < nums.length; i++) {
-    current = new Train(nums[i]);
+    current = new Train(nums[i]);//우선 current에 i번째 train 담기
 
-    if (i === 0) {
-      ll.head = current;
-    } else {
-      prev.next = current;
+    if (i === 0) {//첫번째 train이면
+      ll.head = current;//헤드에 연결
+    } else {//중간 train이면
+      prev.next = current;//이전 노드랑 현재노드연결
     }
 
-    prev = current;
+    prev = current;//현재노드 prev에 저장
   }
 
   return ll;

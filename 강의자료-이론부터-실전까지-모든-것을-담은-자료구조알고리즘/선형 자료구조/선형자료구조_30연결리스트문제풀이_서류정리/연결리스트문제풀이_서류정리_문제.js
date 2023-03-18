@@ -11,8 +11,23 @@ function LinkedList() {
 function answer(ll) {
   // 코드 구현 시작 영역
 
-  // …
+  let current = ll.head;
+  let prev =null;
+  let next = 0;
+  //노드 순서대로 따져보면 prev,currnet,next순서대로
+  //next가 우선 한칸 가고,
+  // prev를 current.next에 덮어씌우고(이게 노드 순서바꾸는 로직)
+  // prev한칸 가고
+  // current 한칸가고
+  while(current != null){
+    next= current.next;
+    current.next=prev;
+    prev=current;
+    current =next;
+  }//맨끝노드찾기
+  ll.head = prev;
 
+  return ll;
   // 코드 구현 종료 영역
 
   return ll;
