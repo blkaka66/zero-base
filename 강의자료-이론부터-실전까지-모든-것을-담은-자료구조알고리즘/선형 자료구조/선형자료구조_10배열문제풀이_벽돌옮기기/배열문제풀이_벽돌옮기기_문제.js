@@ -3,13 +3,25 @@
 /* user code */
 function answer(blocks) {
   let result = 0;
+  
+  let target = 0;
+  for(let i=0;i<blocks.length;i++)
+  {
+    target+=blocks[i];
+  }
 
-  // 코드 구현 시작 영역
+  target=target/blocks.length;
+  for(let a=0;a<blocks.length;a++)
+  {
 
-  // …
+    if(target>=blocks[a])
+    {
+      console.log("더하기");
+      result+=(target-blocks[a]);
+    }
 
-  // 코드 구현 종료 영역
-
+    console.log(result);
+  }
   return result;
 }
 

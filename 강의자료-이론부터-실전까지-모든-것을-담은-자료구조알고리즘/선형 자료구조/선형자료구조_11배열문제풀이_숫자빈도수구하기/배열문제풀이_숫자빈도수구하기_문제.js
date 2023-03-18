@@ -5,12 +5,36 @@ function answer(s, e) {
   let result = [];
 
   // 코드 구현 시작 영역
-
-  // …
+  let arr=[];
+  arr = makeArr(s,e);
+  result = checkNum(arr);
 
   // 코드 구현 종료 영역
 
   return result;
+}
+function checkNum(arr)
+{
+  const res = new Array(10).fill(0);
+  arr.forEach((subArr) =>{
+    subArr.forEach((num) =>{
+      res[num]++;
+    });
+  });
+  return res;
+}
+function makeArr(s,e)
+{
+  let arr=[];
+  let str="";
+  let strarr=[];
+  for(let i=s;i<=e;i++)
+  {
+    str =i.toString();
+    strarr=[...str];
+    arr.push(strarr);
+  }
+  return arr;
 }
 
 /* main code */

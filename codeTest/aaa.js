@@ -1,43 +1,56 @@
 function solution(s) {
-    const arr=[...s];
+    let arr=[...s];
+    let word=  divide(arr);
+    let res =  reverse(word);
+    return res;
+}
+function reverse (word){
+    let arr=[];
     let res=[];
-    for(let i=0;i<26;i++)
+   
+    for(let i=0;i<word.length;i++)
     {
-        res[i]=0;
-    }
-
-   makeArr(s,arr,res);
-
-   var answer = true;
-   answer = isAll(res,answer);
-
-   console.log(answer);
-   return answer;
-}
-
-function isAll(res,answer)
-{
-    
-    for(let i=0;i<res.length;i++)
-    {
-        if(res[i] === 0)
+       
+        for(let a =word[i].length-1; a>=0;a--)
         {
-            answer =false;
+            arr.push(word[i][a]);
         }
+        
+        arr= arr.join("");
+        res.push(arr);
+        arr=[];
     }
-    return answer;
+   
+    return res;
 }
 
-function makeArr(s,arr,res)
-{
-    let num=0;
+function divide(arr){
+    let word=[];
+    let a=[];
     for(let i=0;i<arr.length;i++)
     {
-        num=s.charCodeAt(i);
-        res[num-97]++;
+        
+        
+                if(arr[i]==="," || arr[i] === "." ||arr[i] === " "||arr[i]==="!"|| arr[i] ==="?"||i===(arr.length-1))
+                {
+                    
+                    
+                    if(a.length>0){ 
+                        word.push(a);
+                        
+                        a=[];
+                    }
+                   
+                }
+                
+                else{
+                   
+                    { a.push(arr[i]);}
+                   
+                }
+            }
+            return word;
     }
-    console.log(res);
-}
 
-s="abcdefghijklmnopqrstuvvwxyz";
-solution(s);
+   
+
