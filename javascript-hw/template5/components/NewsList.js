@@ -1,4 +1,16 @@
 
+function makeScroll(){
+  const scrollObserver = document.createElement("div");
+  scrollObserver.classList.add("scroll-observer");
+
+  const img = document.createElement("img");
+  img.src="img/ball-triangle.svg";
+
+  scrollObserver.appendChild(img);
+
+  document.body.appendChild(scrollObserver);
+  console.log(document.body);
+}
 
 // gx53q11@naver.com
 
@@ -11,8 +23,9 @@ const page =1;
 const apikey = "c200537b91234493ac99a0e5870abf36";
 const url = `https://newsapi.org/v2/top-headlines?country=kr&category=${category === 'all' ? '' : category}&page=${page}&pageSize=${5}&apiKey=${apikey}`;
 
-await axios.get(url)
-  .then(response => {
+try{
+const response = await axios.get(url);
+ 
     // API 호출이 성공한 경우
     const newsListContainer = document.createElement("div");
     newsListContainer.classList.add("news-list-container");
@@ -66,16 +79,17 @@ await axios.get(url)
     });
     
     document.body.appendChild(newsListContainer);
+    makeScroll();
     
     // 뉴스 데이터 처리
-  })
-  .catch(error => {
+  }
+  catch(error) {
     // API 호출이 실패한 경우
     console.log(error);
-  });
+  }
+
+
 }
-
-
 
 
 export default NewsList;
