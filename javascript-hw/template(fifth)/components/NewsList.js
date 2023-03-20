@@ -8,6 +8,10 @@
 //     document.body.appendChild(newsList);
 // }
 
+// gx53q11@naver.com
+
+// dnjs120!
+
 // function NewsList(){
 // const category = "health";
 // const url = `https://newsapi.org/v2/top-headlines?country=kr&category=${category === 'all' ? '' : category}&page=${page}&pageSize=${5}&apiKey=${c200537b91234493ac99a0e5870abf36}`;
