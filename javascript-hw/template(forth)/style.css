@@ -1,6 +1,16 @@
 :root {
   --height:300px;
   --width:300px;
+  --size: (--height)*(--width);
+}
+
+.search {
+  position: relative;
+  top: 50px;
+  left: 300px;
+  width: 100px;
+  height: 30px;
+  border: solid 1px red;
 }
 
 .calender {
@@ -31,8 +41,8 @@
   width: calc(var(--width));
   height: calc(var(--height) * 0.7);
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(7, calc(var(--width) / 7));
+  grid-template-rows: repeat(7, calc(var(--height) * 0.7 / 7));
   border-radius: 0% 0% 8% 8%;
   overflow: hidden;
 }

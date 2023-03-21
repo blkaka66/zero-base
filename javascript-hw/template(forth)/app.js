@@ -5,7 +5,21 @@ let currentMonth = date.getMonth()+1;//이번달
 let currentDate = date.getDate();//오늘날짜
 let currentDay =date.getDay();//오늘 요일(오늘 요일 0부터일욜)
 
+const calender = document.getElementsByClassName("calender")[0];
 
+const observer = new ResizeObserver(function() {
+    console.log("Calender resized!");
+    console.log(calender.clientHeight);
+  });
+
+observer.observe(calender);
+
+const search = document.getElementsByClassName("search")[0];
+search.addEventListener("click",function(){
+
+    calender.style.display = "block";
+
+});
 
 
 let prev =new Date(currentYear,currentMonth-1,0);//이전달의 정보
@@ -106,11 +120,13 @@ function makeCalender(){
                 div.classList.add(daysOfWeek[k]);
                 div.innerHTML=daysOfWeek[k];
             }
+            
             else if( i===1){//전 달 & 이번달
                 const preday = prevDate - prevDay + k;
                 if(preday <= prevDate){
                     div.classList.add('prev-month');
                     div.innerHTML = preday;
+                   
                 }
                 else{
                     div.classList.add('this-month');
@@ -132,12 +148,35 @@ function makeCalender(){
                 }
                 
             }
-            
+            div.addEventListener('click' , function(){
+                const date = div.innerHTML;
+                let month =0;
+                let year= 0;
+                if (div.classList.contains('prev-month')) {
+                    month = currentMonth - 1;
+                    year = currentYear;
+                    if (month < 1) {
+                        month = 12;
+                        year--;
+                    }
+                } else if (div.classList.contains('this-month')) {
+                    month = currentMonth;
+                    year = currentYear;
+                } else if (div.classList.contains('next-month')) {
+                    month = currentMonth + 1;
+                    year = currentYear;
+                    if (month > 12) {
+                        month = 1;
+                        year++;
+                    }
+                }
+                search.innerHTML=year+"-"+month+"-"+date;
+            });
             calenderGrid.appendChild(div);
         }
     }
 }
 
-  
+  console.log(document.body)
 
 
