@@ -1,4 +1,7 @@
 // do something!
+import NewsList from "./NewsList.js";
+import {category} from "./NewsList.js"
+
 const categories = [
     { id: "all", name: "전체보기", active: true },
     { id: "business", name: "비즈니스" , active: false},
@@ -7,10 +10,12 @@ const categories = [
     { id: "science", name: "과학", active: false },
     { id: "sports", name: "스포츠", active: false },
     { id: "technology", name: "기술" , active: false},
+    
   ];
 
 
 function Nav(){
+    const root = document.getElementById("root");
     const list = document.createElement("nav");
     list.classList.add("category-list");
 
@@ -44,15 +49,15 @@ function Nav(){
     
 
     list.appendChild(ul);
-    document.body.appendChild(list);
+    root.appendChild(list);
 }
 
-function click(category,li,categories,children){
-    category.active = !category.active;
+function click(categore,li,categories,children){
+    categore.active = !categore.active;
     li.classList.add("active");
     let target=null;
     categories.forEach((category) =>{ //acitve는 1개여야만 한다
-        if(li.id !== category.id){
+        if(li.id !== categore.id){
             category.active= false;
         }
         else{
@@ -68,7 +73,9 @@ function click(category,li,categories,children){
             child.classList.remove("active"); //target뺴고 active 싹다제거
         }
     });
-  
+    category.id = categore.id;
+    
+
 
 }
 export default Nav;
