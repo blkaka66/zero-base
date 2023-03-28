@@ -19,6 +19,7 @@
   left: 300px;
   width: var(--height);
   height: var(--width);
+  display: none;
 }
 .calender .calender-nav {
   position: absolute;

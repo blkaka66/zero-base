@@ -5,10 +5,11 @@ import { setTime } from './setTime.js';
 
 
   const AnalogClock = $container => {
-    init();
+ 
+    init($container);
     setInterval(() => {
     let time = getTime();
-      setTime(time);
+      setTime(time,$container);
     }, 1000);
   };
 
