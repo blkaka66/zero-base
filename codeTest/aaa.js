@@ -1,69 +1,55 @@
-function solution(arr) {
-    const firstWord = arr[0];
-    const commonChars = [];
-    let isIn=true;
-    for (let i = 0; i < firstWord.length; i++) {
-      const char = firstWord[i];
-      for(let k=1;k<arr.length;k++){
-        if(arr[k].includes(char) === false){
-            isIn=false;
-        }
-      }
+function solution(n) {
+  let aCard=0;
+  let bCard=0;
+  let life=0;
+  while(n.length>1){
+    sortCard(n);
 
-      if(isIn === true){
-        commonChars.push(char)
-      }
-      isIn=true;
+    aCard = pickCard(n);
+
+    bCard = pickCard(n);
+    console.log(aCard);
+    console.log(bCard)
+    life = compardCard(aCard,bCard);
+    //console.log(life+"^^^")
+    if(life > 0){
+      n.push(life);
     }
-  console.log(commonChars)
-    return commonChars;
+  }
+  console.log(n)
+  if(n.length === 0){
+    console.log(0)
+  }
+  else{
+    console.log(n)
   }
   
-  // 사용 예시
-  const words = ['0326', '05308','03'];
-solution(words);
- // console.log(commonChars); // ['a']
+};
+function compardCard(aCard,bCard){
+  let life=0;
+  if(aCard === bCard){
+    life=0;
+  }
+  else if(aCard>bCard){
+    life=aCard-bCard;
+  }
+  else if(aCard < bCard){
+    life=bCard-aCard;
+  }
+  return life;
 
+};
 
+function sortCard(cardArr){
+  cardArr.sort(function(a,b) {return a-b;});
+};
 
+function pickCard(cardArr){
+  let card=0;
+  card=cardArr[cardArr.length-1];
+  console.log(card+"%%%%");
+  cardArr.pop();
+  return card;
+};
 
-//  function solution(arr) {
-//     let answer = [];
-//     let target=[];
-//     let isIn=true;
-//     for(let i=0;i<arr.length-1;i++){
-//         target=arr[i];
-//         for(let a = 0;a<target.length;)
-//         {
-//             for(let j=i+1;j<arr.length;j++){
-//                 if((arr[j].includes(target[a])) === false){//한단어라도 포함안하면
-//                     a++;
-//                     isIn=false;
-//                     break;
-//                 }
-//             }
-//             if((answer.includes(target[a])) === false && isIn === true){
-//                 answer.push(target[a]);
-//             }
-//             isIn=false;
-//             a++;
-//         }
-//     }
-// let m=[];
-//     for(let n=0;n<answer.length;n++){
-      
-//         a = answer[n].charCodeAt(0);
-//         m.push(a)
-//     }
-
-//     m.sort(function(a,b) {return a-b;})
-//     answer=[];
-//     for(let p=0;p<m.length;p++){
-        
-        
-//         answer.push(String.fromCodePoint(m[p]));
-//     }
-//     return answer;
-// }
-
-
+solution([4,8,6,1,2]);
