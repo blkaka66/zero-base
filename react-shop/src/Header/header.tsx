@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./header.css";
-import Tabs from "./Tab";
-//import { ReactComponent as MyComponent  } from "./assets/sun.svg";
+import Tabs from "./Tab/Tab";
+
 
 const TabList = [
   { index:0 ,label: 'React Shop', link: '/react-shop' },
@@ -18,9 +18,7 @@ function Header(): JSX.Element {
    
       <nav>
         <ul>
-          {/* {TabList.map((tab ) => (
-            <Tabs key={tab.label} title={tab.label} link={tab.link} index={tab.index} />
-          ))} */}
+          
           {TabList.map((tab) => (
             <Tabs
               key={tab.label}

@@ -1,0 +1,71 @@
+span{
+  all:unset;
+}
+.bodyUp{
+    position: absolute;
+    display:inline-block;
+    width:100%;
+    background-color: yellow;
+    .imageContainer {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+      
+      
+    .prev,
+    .next{
+    position: absolute;
+    top:0px;
+    width: 30px;
+    height: 100%;
+    z-index:1;
+    background-color: transparent;
+ 
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    }
+      
+    .prev {
+    left: 0px;
+    }
+    
+    .next {
+    right: 0px;
+    }
+    
+    .description,
+    .goto{
+      position: absolute; 
+      top: 30%; 
+      left: 10%; 
+
+      z-index: 1;
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      color: white;
+      text-align: center;
+    }
+   
+    .goto{
+      top:40%;
+      left: 15%; 
+      width: 130px;
+      height: 48px;
+      background-color: #191d24;
+
+      .font{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color:#A6ADBA;
+      }
+    }
+
+}

@@ -1,0 +1,62 @@
+.container {
+  position: relative;
+  top: 700px;
+  height: 100%;
+  z-index: 3;
+  width: 100vw;
+  background-color: #30343c;
+  display: grid;
+  place-items: center;
+}
+
+.ProductTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+}
+.ProductTitle span {
+  font-size: 32px;
+  font-weight: bold;
+  color: #A6ADBA;
+}
+
+.CategoryGridDiv {
+  position: relative;
+  display: grid;
+  width: 90%;
+  height: 480px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  margin-bottom: 200px;
+}
+.CategoryGridDiv .CategoryDiv {
+  width: 294px;
+  display: grid;
+  grid-template-rows: 7fr 3fr;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+}
+.CategoryGridDiv .CategoryDiv .imageContainer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CategoryGridDiv .CategoryDiv .imageContainer img {
+  max-width: 50%;
+  max-height: 50%;
+}
+.CategoryGridDiv .CategoryDiv .discript {
+  background-color: #374151;
+  color: #A6ADBA;
+  font-size: 16px;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.CategoryGridDiv .CategoryDiv .discript .title {
+  font-weight: bold;
+  padding-bottom: 15px;
+}

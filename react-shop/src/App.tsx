@@ -1,13 +1,13 @@
 
-import './App.css'
-import Header from './header';
-import Body from './Body';
+import './App.module.css'
+import Header from './Header/header';
+import Body from './Body/Body';
 
 function App() {
   
 
   return (
-    <div>
+    <div className='Body'>
       <Header />
       <Body/>
     </div>

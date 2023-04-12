@@ -33,7 +33,7 @@ ChainingHashTable.prototype.put = function(key , value){
     console.log(`key : ${key} -> index: ${index}`);
 
     if(this.table[index] === undefined){//만약 빈칸이면()
-        this.table[index] = new LinkedList();//일단 링크드리스트
+        this.table[index] = new LinkedList();//일단 링크드리스트 만들기
     }
     this.table[index].append(new Element(key,value)); //링크드리스트로 append함
     this.length++;
@@ -103,18 +103,18 @@ ChainingHashTable.prototype.remove = function (key) {
                 element = current.data;
                 this.table[index].remove(current.data);
                 this.length--;
-                if(this.table[index].isEmpty()){
-                    delete this.table[index];
+                if(this.table[index].isEmpty()){//해당 데이터 삭제했더니 링크드 리스트가 빈방이됐으면
+                    delete this.table[index];//링크드 리스트 자체를 삭제(메모리 잡아먹으니까)
                 }
             }
             
         current=current.next;//담칸
             
-        }while(current);//전부 돌아도 못찾으면
+        }while(current);//나올때까지 찾아라
     }
 
    
-    return element;//실패!
+    return element;
   };
   
 
