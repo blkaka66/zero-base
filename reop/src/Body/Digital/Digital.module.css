@@ -1,0 +1,61 @@
+.container {
+  position: relative;
+  height: 100%;
+  padding-top: 100px;
+  z-index: 3;
+  width: 100vw;
+  background-color: #30343c;
+  display: grid;
+  place-items: center;
+}
+.container .ProductTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+}
+.container .ProductTitle span {
+  font-size: 32px;
+  font-weight: bold;
+  color: #A6ADBA;
+}
+.container .CategoryGridDiv {
+  position: relative;
+  display: grid;
+  width: 90%;
+  height: 1000px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 200px;
+}
+.container .CategoryGridDiv .CategoryDiv {
+  width: 294px;
+  display: grid;
+  grid-template-rows: 7fr 3fr;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  margin-bottom: 200px;
+}
+.container .CategoryGridDiv .CategoryDiv .imageContainer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .CategoryGridDiv .CategoryDiv .imageContainer img {
+  max-width: 50%;
+  max-height: 50%;
+}
+.container .CategoryGridDiv .CategoryDiv .discript {
+  background-color: #374151;
+  color: #A6ADBA;
+  font-size: 16px;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.container .CategoryGridDiv .CategoryDiv .discript .title {
+  font-weight: bold;
+  padding-bottom: 15px;
+}
