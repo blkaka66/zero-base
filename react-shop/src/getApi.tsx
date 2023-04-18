@@ -1,13 +1,18 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-interface Product {
+export interface Product {
   id: number;
   title: string;
   price: number;
   description: string;
   category: string;
   image: string;
+  rating:{
+    count:number;
+    rate:number;
+  }
+  cartCount:number;
 }
 
 function getProducts() {

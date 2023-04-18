@@ -1,7 +1,11 @@
-import { useState } from "react";
+
 import "./header.css";
 import Tabs from "./Tab/Tab";
 
+
+import { useSelector } from 'react-redux';
+import { RootState } from '../RootState';
+import { Link } from "react-router-dom";
 
 const TabList = [
   { index:0 ,label: 'React Shop', link: '/react-shop' },
@@ -12,7 +16,11 @@ const TabList = [
 
 
 function Header(): JSX.Element {
- 
+  const cartItems = useSelector((state: RootState) => state.cart.cartItems);
+  let sumCart=0;
+  for(let i=0;i<cartItems.length;i++){
+    sumCart+=cartItems[i].cartCount;
+  }
   return (
     <header>
    
@@ -31,7 +39,7 @@ function Header(): JSX.Element {
         <ul>
             {/* <li><a ><img src={imageSrc} alt={imageAlt}/></a></li> */}
             <li><input type="text" placeholder="검색" /></li>
-            {/* //<li><a href={link}><img src={imageSrc} alt={imageAlt}/></a></li> */}
+            <Link to={`/cart`}>장바구니{sumCart}</Link>
             
 
         </ul>

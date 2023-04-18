@@ -1,58 +1,62 @@
-function solution(p, s) {
-    const question =[...p];
-    const answer=s.split(' ');
-    let usedChar=[];
-    let isUsed=false;
-    let used = [];
-    for(let i=0;i<question.length;i++){
-        for(let a=0;a<usedChar.length;a++)
-        {
-            if(usedChar[a] === question[i]){ //한번이라도 탐색한 글자면
-                isUsed=true;
+function solution(A) {
+    let length = A.length;
+
+    A.sort(function(a,b){return a-b;});
+
+    let arr=[];
+
+    for(let i=0;i<length;i++){
+        arr.push(0);
+    }
+
+    let count=0;
+    let Arrindex=length-1;
+    let Aindex=length-1;
+    let isHol=true;
+    if(length>=3){
+        while(count<length){
+
+        
+            if(isHol === true){        
+                arr[Arrindex]=A[Aindex];
+                Arrindex-=2;
             }
-        }
-        if(isUsed === false){//탐색안했던 글자면
-            usedChar.push(question[i]);
-            let index = findIndex(question[i],question);
-            let pass = findChar(index,answer,used);
-            if(pass === false){
-                console.log("끝")
-                return false;
+            else if(isHol === false){
+                arr[Arrindex]=A[Aindex];
+                Arrindex+=2;
             }
-        }
     
-       isUsed=false;
-    }
-    console.log("통과")
-    return true;
-}
-function findChar(index,answer,used){
-    let pass = true;
-    let target =answer[index[0]];
-    console.log(target+"^^^");
-    for(let i=0;i<index.length;i++){
-        if(target !== answer[index[i]]){
-           console.log("^^^")
-            pass=false;
+            if(Arrindex<0){
+                isHol=false;
+                Arrindex=1;
+            }
+            Aindex-=1
+            count++;
         }
     }
-    for(let z=0;z<used.length;z++){
-        if(target === used[z]){
-            pass=false;
-        }
+    else{
+        arr =A.sort(function(a,b){return b-a;});
     }
-    used.push(target);
-    return pass;
+    console.log(arr)
+    calculate(arr)
+
 }
 
-function findIndex(char,question){
-    let index=[];
-    for(let i=0;i<question.length;i++){
-        if(question[i] === char){
-            index.push(i);
+function calculate(arr){
+    let sum =0;
+    
+    for(let i=0;i<arr.length;i++){
+        if(i %2 ===0){
+            
+           
+            sum+=arr[i]*(i+1);
+        }
+        else{
+            console.log(arr[i])
+            sum+=arr[i]*-(i+1);
         }
     }
-    return index;
-    
+    console.log(sum+"^^^")
 }
-solution("가나다가","바나나 드래곤 가나 오염")
+
+solution([1,2]); //32
