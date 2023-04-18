@@ -1,22 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import getProducts from '../getApi';
-import { useParams } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
 import styles from './ProductDetail.module.css';
 import {  useDispatch } from 'react-redux';
 import { addToCart,removeFromCart } from '../Cart/CartActions';
 import { Product } from '../getApi';
-// export interface Product {
-//   id: number;
-//   title: string;
-//   price: number;
-//   description: string;
-//   category: string;
-//   image: string;
-//   rating:{
-//     count:number;
-//     rate:number;
-//   }
-// }
+
+
 
 function ProductDetail(): JSX.Element {
   const [productInfo, setProductInfo] = useState<Product | null>(null);
@@ -58,8 +48,8 @@ function ProductDetail(): JSX.Element {
         <div className={styles.discrpit}><span>{productInfo.description}</span></div>
         <div className={styles.rating}><span>{productInfo.rating.rate}/{productInfo.rating.count}참여</span></div>
         <div className={styles.price}><span>${productInfo.price}</span></div> 
-        <button className={styles.gotoJang} onClick={handleRemoveFromCart}>장바구니에 담기</button>
-        <button className={styles.asd} onClick={handleAddToCart}>장바구니로 이동</button>  
+        <button className={styles.addtoJang} onClick={handleAddToCart}>장바구니에 담기</button>
+        <Link to={`/cart`} className={styles.gotoJang} ><span>장바구니로 이동</span></Link>  
       </div>
     
   );

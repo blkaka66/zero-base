@@ -80,8 +80,11 @@
             
             .count{
                 position: absolute;
+                z-index:100;
                 bottom: 20px;
                 left:520px;
+                color: #A6ADBA;
+                font-weight:bold;
             }
         }
     } 

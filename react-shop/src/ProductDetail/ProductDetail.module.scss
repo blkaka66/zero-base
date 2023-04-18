@@ -71,11 +71,23 @@
         position: absolute;
         top:340px;
         left:390px;
-        &.gotoJang{
+        &.addtoJang{
             background-color: red;;
         }
-        &.asd{
-            left:550px;
+        
+    }
+    .gotoJang{
+        position: absolute;
+        top:340px;
+        background-color: red;
+        width:157px;
+        height:50px;
+        left:600px;
+        border-radius: 10px;
+        span{
+            position: absolute;
+            left:17px;
+            top:10px;
         }
     }
 }

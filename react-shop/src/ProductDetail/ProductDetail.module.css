@@ -73,9 +73,20 @@
   top: 340px;
   left: 390px;
 }
-.bodys button.gotoJang {
+.bodys button.addtoJang {
   background-color: red;
 }
-.bodys button.asd {
-  left: 550px;
+.bodys .gotoJang {
+  position: absolute;
+  top: 340px;
+  background-color: red;
+  width: 157px;
+  height: 50px;
+  left: 600px;
+  border-radius: 10px;
+}
+.bodys .gotoJang span {
+  position: absolute;
+  left: 17px;
+  top: 10px;
 }
