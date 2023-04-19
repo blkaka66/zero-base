@@ -1,6 +1,6 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from './CartActions';
+import { ADD_TO_CART, REMOVE_FROM_CART ,CLEAR_CART} from './CartActions';
 import { Product } from '../getApi';
-import { createStore } from 'redux';
+
 
 export interface CartState {
   cartItems: Product[];
@@ -39,7 +39,7 @@ const cartReducer = (state = initialState, action: any) => {//cartaction에서 �
         let updatedCartItems = [...state.cartItems];//일단 배열복사해서
         const existingProductIndex = state.cartItems.findIndex(item => item.id === action.payload);//해당 product 의 index찾고
         updatedCartItems[existingProductIndex].cartCount -= 1;//cartcount-- 
-        console.log("^^^")
+
         localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));//로컬스토리지에 저장
 
         return {
@@ -54,7 +54,14 @@ const cartReducer = (state = initialState, action: any) => {//cartaction에서 �
           ...state,
           cartItems: updatedCartItems,
         };
-      }
+      };
+      case CLEAR_CART:
+      localStorage.removeItem('cartItems'); 
+      return {
+        ...state,
+        cartItems: [],
+      };
+
     default:
       return state;
   }

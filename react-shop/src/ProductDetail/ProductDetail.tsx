@@ -5,10 +5,14 @@ import styles from './ProductDetail.module.css';
 import {  useDispatch } from 'react-redux';
 import { addToCart,removeFromCart } from '../Cart/CartActions';
 import { Product } from '../getApi';
+interface ProductDetailProps {
+
+  theme:boolean;
+}
 
 
 
-function ProductDetail(): JSX.Element {
+function ProductDetail(theme:ProductDetailProps): JSX.Element {
   const [productInfo, setProductInfo] = useState<Product | null>(null);
   const { id } = useParams<{ id: string }>();
   const products = getProducts();
@@ -40,7 +44,7 @@ function ProductDetail(): JSX.Element {
   };
   return (
     
-      <div className={styles.bodys}>
+    <div className={`${styles.bodys} ${theme.theme ? styles.darkHeader : styles.lightHeader}`}>
         <div className={styles.imgContainer}>
           <img src={productInfo.image} ></img>
         </div>

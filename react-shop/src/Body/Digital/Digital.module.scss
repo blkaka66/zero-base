@@ -5,7 +5,12 @@
     padding-top:100px;
     z-index:3;
     width:100vw;
-    background-color: #30343c;
+    &.darkHeader {
+        background-color: #30343c;
+      }
+    &.lightHeader  {
+    background-color: white;
+    }
     display: grid;
     place-items: center;
     

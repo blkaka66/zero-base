@@ -3,7 +3,30 @@
   width: 100vw;
   height: 100vh;
   overflow-y: auto;
+}
+.bodys.darkHeader {
   background-color: #30343c;
+}
+.bodys.lightHeader {
+  background-color: white;
+}
+.bodys .sumResult {
+  position: absolute;
+  z-index: 100;
+  top: 50px;
+  right: 270px;
+  color: #A6ADBA;
+  font-weight: bold;
+}
+.bodys .purchase {
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  background-color: #641ae6;
+  top: 40px;
+  right: 100px;
+  color: #A6ADBA;
+  font-weight: bold;
 }
 .bodys .cartContainer {
   position: absolute;
@@ -59,15 +82,19 @@
   font-weight: bold;
   color: #A6ADBA;
 }
-.bodys .cartContainer .container button {
+.bodys .cartContainer .container .minus {
   position: absolute;
   bottom: 10px;
   width: 100px;
   left: 400px;
   background-color: #641ae6;
 }
-.bodys .cartContainer .container button.asd {
+.bodys .cartContainer .container .plus {
+  position: absolute;
+  bottom: 10px;
+  width: 100px;
   left: 550px;
+  background-color: #641ae6;
 }
 .bodys .cartContainer .container .count {
   position: absolute;

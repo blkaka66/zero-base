@@ -4,9 +4,14 @@
   overflow-y: auto;
   z-index: 3;
   width: 100vw;
-  background-color: #30343c;
   display: grid;
   place-items: center;
+}
+.container.darkHeader {
+  background-color: #30343c;
+}
+.container.lightHeader {
+  background-color: white;
 }
 .container .ProductTitle {
   position: relative;

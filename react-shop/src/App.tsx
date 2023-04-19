@@ -1,6 +1,6 @@
 import {Routes, Route, BrowserRouter } from "react-router-dom";
 import styles from './App.module.css'
-
+import { useState } from "react";
 import Header from './Header/header';
 import Body from './Body/Body';
 import Digital from './Body/Digital/Digital';
@@ -13,20 +13,27 @@ import ShopCart from "./ShopCart/ShopCart";
 
 
 function App(): JSX.Element  {
+  const [isBlackTheme, setIsBlackTheme] = useState(true);
+
+  const ThemeChange = () => {
+
+    setIsBlackTheme(!isBlackTheme);
+  };
+
   return (
     <>
     <Provider store={store}>
       <div className={styles.body}>
       <BrowserRouter>
-          <Header/>
+          <Header theme={isBlackTheme} ThemeChange={ThemeChange}/>
           <Routes>
-            <Route path="/" element={<Body/>}></Route>
-            <Route path="/cart" element={<ShopCart/>}></Route>
-            <Route path="/react-shop" element={<Body/>}></Route>
-            <Route path="/fashion" element={<Cloth/>}></Route>
-            <Route path="/accessories" element={<Jewerely/>}></Route>
-            <Route path="/digital" element={<Digital/>}></Route>
-            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/" element={<Body theme={isBlackTheme}/>}></Route>
+            <Route path="/cart" element={<ShopCart theme={isBlackTheme}/>}></Route>
+            <Route path="/react-shop" element={<Body theme={isBlackTheme}/>}></Route>
+            <Route path="/fashion" element={<Cloth theme={isBlackTheme}/>}></Route>
+            <Route path="/accessories" element={<Jewerely theme={isBlackTheme}/>}></Route>
+            <Route path="/digital" element={<Digital theme={isBlackTheme}/>}></Route>
+            <Route path="/product/:id" element={<ProductDetail theme={isBlackTheme}/>} />
           </Routes>
       </BrowserRouter>
     </div>

@@ -14,7 +14,17 @@ const TabList = [
   { index:3 ,label: '디지털', link: '/digital' },
 ];
 
-function Header(): JSX.Element {
+interface HeaderProps {
+  ThemeChange: () => void;
+  theme:boolean;
+}
+
+function Header({theme,ThemeChange}: HeaderProps): JSX.Element {
+  const [hide, setHide] = useState(false);
+  const handleClick = () => {
+    ThemeChange();
+  };
+
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
   let sumCart=0;
   for(let i=0;i<cartItems.length;i++){
@@ -22,11 +32,20 @@ function Header(): JSX.Element {
   }
 
   const [searchResult, setSearchResult] = useState<Product[]>([]); 
-  const [searchQuery, setSearchQuery] = useState("");
+ 
+ 
   const product = getProducts();
   const submit = (event: React.KeyboardEvent<HTMLInputElement>) => {
     const query = event.currentTarget.value;
-    setSearchQuery(query);
+    
+    if(query.length === 0){
+      console.log("^^^")
+      setHide(true);
+    }
+    else{
+      console.log("&&&&&");
+      setHide(false);
+    }
     const upperQuery= query.toUpperCase();
     if(upperQuery.length>0){
       const searchResult = searchProduct(upperQuery,product);
@@ -39,7 +58,7 @@ function Header(): JSX.Element {
 
 
   return (
-    <header>
+    <header className={theme ? styles.darkHeader : styles.lightHeader}>
    
       <nav>
         <ul>
@@ -54,16 +73,17 @@ function Header(): JSX.Element {
           ))}
         </ul>
         <ul>
-            {/* <li><a ><img src={imageSrc} alt={imageAlt}/></a></li> */}
+            <button onClick={handleClick}>흑백</button>
             <li><input type="text" placeholder="검색" onKeyUp={submit} /></li>
             {searchResult.length > 0 && (
-            <ul className={styles.searchResultList}>
+            <ul className={`${styles.searchResultList} ${hide ? styles.hide: styles.show}  `}>
+             
               {searchResult.map((product) => (
                 <Link to={`/product/${product.id}`} className={styles.searchResult} key={product.id}>{product.title}</Link>
               ))}
             </ul>
               )}
-
+            <Link to={`/cart`}><span>장바구니{sumCart}</span></Link>  
         </ul>
         
       </nav>

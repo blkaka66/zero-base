@@ -4,9 +4,14 @@
   height: 100%;
   z-index: 3;
   width: 100vw;
-  background-color: #30343c;
   display: grid;
   place-items: center;
+}
+.container.darkHeader {
+  background-color: #30343c;
+}
+.container.lightHeader {
+  background-color: white;
 }
 
 .ProductTitle {
@@ -37,6 +42,7 @@
   grid-template-rows: 7fr 3fr;
   border-radius: 10px;
   overflow: hidden;
+  border: 1px solid gray;
   height: 100%;
 }
 .CategoryGridDiv .CategoryDiv .imageContainer {

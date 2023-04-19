@@ -4,7 +4,13 @@
     height:100%;
     z-index:3;
     width:100vw;
-    background-color: #30343c;
+    &.darkHeader {
+        background-color: #30343c;
+      }
+    &.lightHeader  {
+    background-color: white;
+    }
+ 
     display: grid;
     place-items: center;
     }
@@ -37,6 +43,7 @@
             grid-template-rows: 7fr 3fr;
             border-radius: 10px;
             overflow:hidden;
+            border:1px solid gray;
             height: 100%;
             .imageContainer{
                 background-color: white;

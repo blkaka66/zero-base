@@ -1,8 +1,14 @@
 .bodys{
     position: relative;
     width:100vw;
-    height:100vw;
-    background-color: #30343c;
+    height:800px;
+
+    &.darkHeader {
+        background-color: #30343c;
+      }
+    &.lightHeader  {
+    background-color: white;
+    }
     .imgContainer{
         position: absolute;
         border-radius: 5%;
@@ -57,10 +63,11 @@
     }
     .price{
         position: absolute;
-        top:350px;
-        left:400px;
+        top:300px;
+        left:500px;
         width:70%;
         height:50px;
+        z-index:101;
         span{
             color:#A6ADBA;
             font-size:20px;

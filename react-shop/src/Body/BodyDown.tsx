@@ -4,25 +4,19 @@ import styles from './BodyDown.module.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Product } from '../getApi';
-// export interface Product {
-//   id: number;
-//   title: string;
-//   price: number;
-//   description: string;
-//   category: string;
-//   image: string;
-// }
+interface BodyDownProps {
+  theme:boolean;
+}
 
 
-
-export default function BodyDown(): JSX.Element {
+export default function BodyDown(theme:BodyDownProps): JSX.Element {
   const products = getProducts();
   const clothProducts = classifyProducts('clothing', products, 4);
   const jewerlyProducts = classifyProducts('jewelery', products, 4);
   const digitalProducts = classifyProducts('electronics', products, 4);
-
+ 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${theme.theme ? styles.darkHeader : styles.lightHeader}`}>
 
       <div className={styles.ProductTitle}>
         <span>패션</span>

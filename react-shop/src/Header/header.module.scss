@@ -3,7 +3,13 @@ header{
     top:0;
     width:100%;
     height:64px;
-    background-color: #191D24;
+    &.darkHeader {
+      background-color: #191D24;
+    }
+    &.lightHeader  {
+      background-color: white;
+    }
+   
     z-index:100;
     display: flex;  
     justify-content: center; 
@@ -36,7 +42,7 @@ header{
           position: fixed;
           right:5px;
           top:60px;
-          display:flex;
+         
           flex-direction: column;
           width:225px;
           background-color: white;
@@ -44,6 +50,12 @@ header{
           align-items:start;
           height:300px;
           overflow-y: scroll;
+          &.hide{
+            display:none;
+          }
+          &.show{
+            display:flex;
+          }
           .searchResult{
             border:1px solid black;
            

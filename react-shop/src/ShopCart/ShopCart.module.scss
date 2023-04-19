@@ -3,7 +3,30 @@
     width: 100vw;
     height: 100vh;
     overflow-y: auto;
-    background-color: #30343c;
+    &.darkHeader {
+        background-color: #30343c;
+      }
+    &.lightHeader  {
+    background-color: white;
+    }
+    .sumResult{
+        position: absolute;
+        z-index:100;
+        top:50px;
+        right:270px;
+        color: #A6ADBA;
+        font-weight:bold;
+    }
+    .purchase{
+        position: absolute;
+        width:130px;
+        height:40px;
+        background-color: #641ae6;
+        top:40px;
+        right:100px;
+        color: #A6ADBA;
+        font-weight:bold;
+    }
     
     .cartContainer{
         position: absolute;
@@ -65,18 +88,24 @@
                 }
             }
             
-            button{
+            .minus{
                 position: absolute;
                 bottom: 10px;
                 width:100px;
                 left:400px;
                 background-color: #641ae6;
-                
-                &.asd{
-                   left:550px;
-                    
-                }
             }
+                
+            .plus{
+                position: absolute;
+                bottom: 10px;
+                width:100px;
+                left:550px;
+                background-color: #641ae6;
+                
+                
+            }
+            
             
             .count{
                 position: absolute;
@@ -86,6 +115,7 @@
                 color: #A6ADBA;
                 font-weight:bold;
             }
+            
         }
     } 
 }
