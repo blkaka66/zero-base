@@ -13,11 +13,11 @@ import ShopCart from "./ShopCart/ShopCart";
 
 
 function App(): JSX.Element  {
-  const [isBlackTheme, setIsBlackTheme] = useState(true);
+  const [isBlackTheme, setIsBlackTheme] = useState(true);//테마 결정하는 상태변수
 
   const ThemeChange = () => {
 
-    setIsBlackTheme(!isBlackTheme);
+    setIsBlackTheme(!isBlackTheme);//흑백 버튼 누르면 isBlackTheme 상태 반대로 됨
   };
 
   return (

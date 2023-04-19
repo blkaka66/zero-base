@@ -55,11 +55,11 @@ const cartReducer = (state = initialState, action: any) => {//cartaction에서 �
           cartItems: updatedCartItems,
         };
       };
-      case CLEAR_CART:
-      localStorage.removeItem('cartItems'); 
+      case CLEAR_CART://만약 장바구니 다 비워야하면
+      localStorage.removeItem('cartItems'); //로컬스토리지 cartitems삭제
       return {
         ...state,
-        cartItems: [],
+        cartItems: [],//cartitems초기화
       };
 
     default:

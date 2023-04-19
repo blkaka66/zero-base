@@ -12,21 +12,16 @@ interface ShopCartProps {
 }
 
 function ShopCart(theme:ShopCartProps): JSX.Element  {
-  const cartItems = useSelector((state: RootState) => state.cart.cartItems);
+  const cartItems = useSelector((state: RootState) => state.cart.cartItems);//전역변수 장바구니 데이터 받아오기
   const dispatch = useDispatch();
+  
   const HandleclearCart = () => {
     // 카트 초기화
 
     dispatch(clearCart());
   };
-  // const [sum, setSum] = useState(0);
-  // let res= 0;
-  // for(let i=0;i<cartItems.length;i++){
-  //   res+=cartItems[i].cartCount * cartItems[i].price;
-  // }
-  // setSum(res);
 
-  const [sum, setSum] = useState(0);
+  const [sum, setSum] = useState(0);//전체 sum 설정
   let res = 0;
   useEffect(() => {
     for(let i = 0; i < cartItems.length; i++) {

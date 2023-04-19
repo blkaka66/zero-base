@@ -1,4 +1,4 @@
-import React from 'react';
+
 import getProducts from '../getApi';
 import styles from './BodyDown.module.css';
 import { Link } from 'react-router-dom';
@@ -10,10 +10,10 @@ interface BodyDownProps {
 
 
 export default function BodyDown(theme:BodyDownProps): JSX.Element {
-  const products = getProducts();
-  const clothProducts = classifyProducts('clothing', products, 4);
-  const jewerlyProducts = classifyProducts('jewelery', products, 4);
-  const digitalProducts = classifyProducts('electronics', products, 4);
+  const products = getProducts();//product 받아오고
+  const clothProducts = classifyProducts('clothing', products, 4);//4개씩 카테고리별로 데이터 받아오기
+  const jewerlyProducts = classifyProducts('jewelery', products, 4);//4개씩 카테고리별로 데이터 받아오기
+  const digitalProducts = classifyProducts('electronics', products, 4);//4개씩 카테고리별로 데이터 받아오기
  
   return (
     <div className={`${styles.container} ${theme.theme ? styles.darkHeader : styles.lightHeader}`}>
@@ -49,10 +49,10 @@ export function CategoryGridDiv({ products, styles }: { products: Product[]; sty
 }
 
 export function CategoryDiv({ product, styles }: { product: Product; styles: any }): JSX.Element {
-  const navigate = useNavigate(); // Hook from React Router for programmatically navigating
+  const navigate = useNavigate(); //상세페이지 가게 하려고
 
   const moveToDetail = () => {
-    navigate(`/product/${product.id}`); // Navigate to the product detail page with the product id as URL parameter
+    navigate(`/product/${product.id}`); // 누르면 링크가 이걸로바뀜
   }
   return (
     <>
@@ -70,8 +70,8 @@ export function CategoryDiv({ product, styles }: { product: Product; styles: any
 }
 
 export function classifyProducts(productName: string, products: Product[], index: number) {
-  if (productName === 'clothing') {
-    return products.filter((product) => product.category.indexOf('clothing') !== -1).slice(0, index);
+  if (productName === 'clothing') {//옷 찾아야하면
+    return products.filter((product) => product.category.indexOf('clothing') !== -1).slice(0, index);//cloth 키워드 포함하는 상품가져오기
   } else {
     return products.filter((product) => product.category === productName).slice(0, index);
   }
