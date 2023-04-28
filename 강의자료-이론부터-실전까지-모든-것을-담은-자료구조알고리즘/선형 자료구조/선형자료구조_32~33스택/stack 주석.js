@@ -48,7 +48,7 @@ Stack.prototype.indexOf = function(element,position = 0){
 };
 
 //includes(): 데이터 존재 여부 확인
-Stack.prototype.includes = function(element,position  = 0;){
+Stack.prototype.includes = function(element,position  = 0){
     for(let i=position; i<this.array.length;i++){
         if(element === this.array[i]){
             return true;

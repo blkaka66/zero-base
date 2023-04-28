@@ -1,4 +1,5 @@
 import {Stack} from "./stack.mjs";
+import {Graph} from "./DFS재귀주석.mjs";
 
 //dfs():DFS탐색(DFS는 노드한놈만 조지는 탐색으로 원하는값이 깊숙한곳에 있는 노드일때 유용함)
 Graph.prototype.dfs = function(startVertex){

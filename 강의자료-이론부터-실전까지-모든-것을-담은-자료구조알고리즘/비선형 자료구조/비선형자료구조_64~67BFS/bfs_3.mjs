@@ -134,4 +134,4 @@ graph.addEdge("E", "I");
 graph.print();
 console.log("");
 
-graph.shortestPath("A");
+graph.shortestPath("B");

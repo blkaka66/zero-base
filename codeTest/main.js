@@ -1,43 +1,72 @@
-function solution(grid) {
 
-    const arr1 = Array.from(Array(grid.length*grid[0].length), () => Array(2).fill(-1))
 
-    let index=0;
-
-    for(let i=0;i<grid.length;i++){
-        for(let a= 0;a<grid[i].length;a++){
-            if(grid[i][a] === "1"){
-                arr1[index][0]=i;
-                arr1[index][1]=a;
-                index++;
-            }
+let AI융합전공 = [ 
+      {        '학수번호': 'V41010101',         '분반': '2',         '교과목명': '고급파이썬프로그래밍 (Advanced Python Programming)', '교수명': '장지원 (Jiwon Jang)',         '학점': '3',         '시간표': '수 4 5 6 (1205)',         '수강정원': '35 / 36'    }, 
+    {        '학수번호': 'V41010102',         '분반': '2',         '교과목명': '고급파이썬프로그래밍 (Advanced Python Programming)', 
+'교수명': '장지원 (Jiwon Jang)',         '학점': '3',         '시간표': '수 7 8 9 (1205)',         '수강정원': '34 / 35'    },
+    {        '학수번호': 'V41010103',         '분반': '2',         '교과목명': '고급파이썬프로그래밍 (Advanced Python Programming)',
+                          '교수명': '문영인 (Moon Young In)',         '학점': '3',         '시간표': '금 1 2 3 (1503)',         '수강정원': '30 / 30'    }, 
+    {        '학수번호': 'V41002201',         '분반': '2',         '교과목명': '컴퓨터수학 (Computer Mathematics)',         '교수명': '허은주 (Heo eunju)',         '학점': '3',         '시간표': '월 4 5 6 (3407)',         '수강정원': '59 / 61'    },   
+    {        '학수번호': 'V41002202',         '분반': '2',         '교과목명': '컴퓨터수학 (Computer Mathematics)',         '교수명': '이민나 (Lee minna)',         '학점': '3',         '시간표': '수 1 2 3 (1403)',         '수강정원': '50 / 50'    },   
+    {        '학수번호': 'V41002203',         '분반': '2',         '교과목명': '컴퓨터수학 (Computer Mathematics)',         '교수명': '이민나 (Lee minna)',         '학점': '3',         '시간표': '수 7 8 9 (3407)',         '수강정원': '51 / 51'    },
+    {
+        '분반': '2',
+        '학수번호': 'V41003201',
+        '교과목명': '언어와논리 (Language and Logic)',
+        '교수명': '심소영 (Shim, So Young)',
+        '학점': '3',
+        '시간표': '화 4 5 6 (3504)',
+        '수강정원': '30 / 35'
+        },
+        {
+        '분반': '3',
+        '학수번호': 'J05002201',
+        '교과목명': '컴퓨터와언어학 (Computer and Linguistics)',
+        '교수명': '김지은 (Kim, Jee Eun)',
+        '학점': '3',
+        '시간표': '수 1 2 3 (1503)',
+        '수강정원': '29 / 30'
+        },
+        {
+        '분반': '4',
+        '학수번호': 'J05005301',
+        '교과목명': '실용자연어처리 (Practical Natural Language Processing)',
+        '교수명': '김주애 (Juae Kim)',
+        '학점': '3',
+        '시간표': '월 7 8 9 (1503)',
+        '수강정원': '16 / 30'
+        },
+        {
+        '분반': '4',
+        '학수번호': 'J05402201',
+        '교과목명': '언어와데이터베이스 (Language and Database)',
+        '교수명': '박정식 (Park, Jeong-Sik)',
+        '학점': '3',
+        '시간표': '목 7 8 9 (1503)',
+        '수강정원': '21 / 30'
         }
-    }
-    for(let i=0;i<arr1.length;i++){
-        if(arr1[i][0] === -1){
-            arr1.splice(i);
-            break;
-        }
-        
-    }
-    measure(arr1);
-   
+        ];
+
+        const text = `1 교필 910001-01 사고와표현 3(40) 김학돈 월09:25-12:10 보1-7536(어학실1)
+        1 교필 910001-02 사고와표현 3(40) 김나현 월09:25-12:10 AI-5101(5101)
+        1 교필 910001-03 사고와표현 3(40) 김학돈 월13:35-16:30 보1-7536(어학실1)`;
+
+const lines = text.split('\n');
+const result = [];
+
+for (let i = 0; i < lines.length; i++) {
+  const line = lines[i].split(/\s+/);
+  const obj = {
+    '학년': line[0],
+    '이수구분': line[1],
+    '학수번호': line[2],
+    '교과목명': line[3],
+    '학점(인원)': line[4],
+    '교수명': line[5],
+    '강의시간': line[6],
+    '강의실': line[7],
+  };
+  result.push(obj);
 }
 
-function measure(arr){
-    
-    for(let i=0;i<arr.length;i++){
-        for(let a=0;a<arr[i].length;a++){
-            if(arr[i][a])
-        }
-    }
-}
-
-
-
-grid = 
-[["1","1","1","1","0"],
-["1","1","0","1","0"],
-["1","1","0","0","0"],
-["0","0","0","0","0"]];
-solution(grid);
+console.log(result);
