@@ -1,0 +1,41 @@
+
+.App{
+    position: relative;
+    width:100vw;
+    height:100vh;
+
+    .signUpDiv{
+       position:absolute;
+       top:30px;
+
+       width:100vw;
+       height:100px;
+       display: flex;
+       justify-content: space-evenly;
+       :Link{
+        text-align: center;
+        line-height: 100px;
+        border:1px solid black;
+        border-radius: 10px;
+        height:100px;
+        width:200px;
+       }
+    
+  
+    }
+    .signInDiv{
+        position:absolute;
+        width:100vw;
+        height:400px;
+        top:200px;
+        border:1px solid black;
+        z-index: 1;
+        .signInWithGoogle{
+            position: inherit;
+            bottom:100px;
+            left:400px;
+            width:150px;
+            height:40px;
+        }
+    }
+}

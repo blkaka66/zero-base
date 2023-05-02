@@ -1,0 +1,27 @@
+form {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  width: 800px;
+  height: 100px;
+}
+form span {
+  padding-right: 10px;
+}
+form .id {
+  width: 200px;
+  height: 30px;
+}
+form .pw {
+  position: relative;
+  right: 230px;
+  width: 200px;
+  height: 30px;
+  top: 55px;
+}
+form button {
+  position: absolute;
+  top: 30px;
+  height: 50px;
+  width: 100px;
+}
