@@ -11,7 +11,7 @@ function Header(props: any): JSX.Element {
     return (
         //로그아웃 버튼은 setLoggedIn이 true일때만 보이게하기
         <div className={styles.header}>
-             <button>로그인</button>
+            <Link to={`/`}>로그인</Link>
             <button onClick={() => logOut(setIsAdmin,setLoggedIn)} >로그아웃</button>
             <Link to={`/admin-menu`}>관리자 메뉴</Link>
         </div>

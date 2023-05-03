@@ -21,11 +21,10 @@ function FirebaseInit() : JSX.Element{
     try {
       
       firebase.initializeApp(firebaseConfig);
-     
-
-     
-      console.log("firebase started", Date.now());
-
+      console.log("firebase 시작");
+      
+   
+    
 
 
     } catch (error) {
@@ -34,14 +33,15 @@ function FirebaseInit() : JSX.Element{
 
   
     
-  }, [firebaseConfig]);
+  }, []);
 
-   
-
+  
   return (
     <></>
   );
 }
 
-
-export { FirebaseInit };
+function firebaseStart(){
+  firebase.initializeApp(firebaseConfig);
+}
+export { FirebaseInit ,firebaseStart};

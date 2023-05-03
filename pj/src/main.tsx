@@ -13,15 +13,14 @@ import MainPage from './main/MainPage.tsx';
 import AdminMenu from './admin-menu/AdminMenu.tsx';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  //배포할땐   <React.StrictMode> 지우기 (useeffect 2번 실행됨)
-  <React.StrictMode> 
+
+    
    <RecoilRoot>
-   <FirebaseInit />
+   <FirebaseInit/>
    <BrowserRouter>
    {/* header는 <Header/>이렇게해야 밑에애들이 자식취급안받음 */}
       <Header/>
       <Routes>
-     
         <Route path="/" element={<App></App>}></Route>
         <Route path="/signUpWithGoogle" element={<SignupWithGoogle></SignupWithGoogle>}></Route>
         <Route path="/signUp" element={<RegisterMember></RegisterMember>}></Route>
@@ -29,6 +28,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/main" element={<MainPage></MainPage>}></Route>
       </Routes>
     </BrowserRouter>
+
    </RecoilRoot>
-  </React.StrictMode>,
+
 )

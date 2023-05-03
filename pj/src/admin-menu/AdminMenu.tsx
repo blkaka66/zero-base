@@ -1,29 +1,30 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import { useState } from 'react';
-
+import { firebaseStart } from '../firebase/InitFirebase';
 interface BoardData {
   content: string;
   createdBy: string;
   title: string;
 }
 
+
+firebaseStart();
+//왜 여기서 initializeApp을 한번 더해야만 오류가 안나지?
 const db = firebase.firestore();
+
+
 
 const addBoard = async (boardName: string, boardData: BoardData) => {
   try {
 
-    const boardRef = db.collection(boardName);
-    const boardDoc = await boardRef.get();
-    console.log(boardDoc)
-
-    await boardRef.add({
-      ...boardData,
-    });
-
+     db.collection("boards").doc(boardName);
+    const a = db.collection("boards").doc(boardName).collection(boardName);
+    a.add(boardData);
+    //await boardRef.set(boardData);
     console.log(`Board in ${boardName} created successfully.`);
   } catch (error) {
-    console.error('Error creating board:', error);
+    console.error('에러:', error);
   }
 };
 
