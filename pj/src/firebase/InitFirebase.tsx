@@ -19,14 +19,8 @@ const firebaseConfig = {
 function FirebaseInit() : JSX.Element{
   useEffect(() => {
     try {
-      
       firebase.initializeApp(firebaseConfig);
       console.log("firebase 시작");
-      
-   
-    
-
-
     } catch (error) {
       console.log("firebase 멈춤 ", error);
     }

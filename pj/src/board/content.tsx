@@ -17,6 +17,10 @@ function Content() :JSX.Element{
     <div>
     {data.content}
     </div>
+    <div>
+        <button>{data.like}</button>
+        <button>{data.disLike}</button>
+    </div>
     </>
   )
 }

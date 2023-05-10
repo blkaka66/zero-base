@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {  useRecoilValue } from 'recoil';
 import { nickNameAtom } from '../state/login';
-import { firebaseStart } from '../firebase/InitFirebase';
+
 interface BoardData {
     content: string;
     createdBy: string;

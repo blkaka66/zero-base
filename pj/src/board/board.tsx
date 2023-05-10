@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
-import { firebaseStart } from "../firebase/InitFirebase";
+
 
 import styles from "./Board.module.css"
 import  {PostList} from '../main/MainPage';

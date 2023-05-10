@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import getData from "../getData/getData";
 import { Link, Navigate } from "react-router-dom";
 
+//여기서 firebaseStart이거 한번 더 호출해야지만 에러가 안떠요
 firebaseStart();
 
 interface PostListProps {
@@ -59,7 +60,7 @@ function PostList({ board, boardName }: PostListProps): JSX.Element{
 
     <Link to={`/boards/${boardName}`}> {boardName} 게시판 </Link>
       {board.map((post) => (
-        <ul key={post.title}>
+        <ul key={post.docId}> 
           <li>
            <Link to={`/boards/${boardName}/${post.docId}`} state={post}>{post.content}</Link>
           </li>
