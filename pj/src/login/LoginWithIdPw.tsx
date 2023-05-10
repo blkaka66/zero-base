@@ -5,7 +5,7 @@ import "firebase/compat/auth";
 import './LoginWithIdPw.css';
 import { useNavigate } from "react-router-dom";
 import { useSetRecoilState } from 'recoil';
-import { isAdminAtom, isLoggedInAtom } from "../state/login";
+import { isAdminAtom, isLoggedInAtom,nickNameAtom} from "../state/login";
 
 interface User {
   uid: string;
@@ -15,7 +15,9 @@ async function isAdmin(user: User | null, setIsAdmin: (isAdmin: boolean) => void
   if (user) {
     const userDoc = await firebase.firestore().collection("members").doc(user.uid).get();
     if (userDoc.exists) {
+
       const userData = userDoc.data();
+      
       if (userData && userData.isAdmin) {
         setIsAdmin(true);
         console.log("관리자계정");
@@ -35,21 +37,37 @@ function Login(): JSX.Element {
   const setIsAdmin = useSetRecoilState(isAdminAtom);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const setNickNmae= useSetRecoilState(nickNameAtom);
   
+
   const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password);
       setLoggedIn(true);
-      navigate("/main");
-      console.log("아이디로 로그인성공");
+
 
       const user = firebase.auth().currentUser;
-      if (user !== null) {
-        isAdmin(user, setIsAdmin);
-      }
+    
       
+
+      if (user !== null) {
+        const userDoc = await firebase.firestore().collection("members").doc(user.uid).get();
+        const userData = userDoc.data();
+        if(userData !== undefined)
+        {
+          console.log(userData.NickName);
+          setNickNmae(userData.NickName);
+          isAdmin(user, setIsAdmin);
+          navigate("/main");
+          console.log("아이디로 로그인성공");
+        }
+
+   
+      }
+
+
+
 
     } catch (error) {
       alert("회원 정보가 없습니다. 회원가입을 하십시오");

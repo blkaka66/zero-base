@@ -9,8 +9,11 @@ import {App} from './App.tsx';
 import RegisterMember from './firebase/Register.tsx';
 import Header from './header/Header.tsx';
 import SignupWithGoogle from './firebase/RegisterWithGoogle.tsx';
-import MainPage from './main/MainPage.tsx';
+import {MainPage} from './main/MainPage.tsx';
 import AdminMenu from './admin-menu/AdminMenu.tsx';
+import Board from './board/board.tsx';
+import WriteContent from './makeContent/WriteContent.tsx';
+import Content from './board/content.tsx';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
@@ -26,6 +29,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/signUp" element={<RegisterMember></RegisterMember>}></Route>
         <Route path="/admin-menu" element={<AdminMenu></AdminMenu>}></Route>
         <Route path="/main" element={<MainPage></MainPage>}></Route>
+        <Route path="/boards/:boardName" element={<Board></Board>}></Route>
+        <Route path="/boards/:boardName/write" element={<WriteContent></WriteContent>}></Route>
+        <Route path="/boards/:boardName/:docId" element={<Content></Content>}></Route>
       </Routes>
     </BrowserRouter>
 
