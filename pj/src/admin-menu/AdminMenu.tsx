@@ -12,6 +12,7 @@ interface BoardData {
   nickName:string;
   like:number;
   disLike:number;
+  likeActionBy: string[];
 }
 
 
@@ -33,6 +34,7 @@ function AdminMenu() {
     nickName:"",
     like:0,
     disLike:0,
+    likeActionBy: [],
   });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

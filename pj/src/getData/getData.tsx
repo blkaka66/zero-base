@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { firebaseConfig } from '../api/API'
+
 import firebase from 'firebase/compat/app';
 
 interface Post {
@@ -9,6 +9,7 @@ interface Post {
   docId:string;
   like:number;
   disLike:number;
+  likeActionBy: string[];
 }
 
 function getData(boardName:string): Promise<Post[]> {

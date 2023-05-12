@@ -12,6 +12,7 @@ interface BoardData {
     nickName:string;
     like:number;
     disLike:number;
+    likeActionBy: string[];
   }
 
 const db = firebase.firestore();
@@ -55,6 +56,7 @@ function WriteContent() {
         like:0,
         disLike:0,
         nickName:"",
+        likeActionBy: [],
         });
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

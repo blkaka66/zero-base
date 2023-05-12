@@ -20,3 +20,9 @@ export const nickNameAtom = atom({
   default: "",
   effects_UNSTABLE: [persistAtom], 
 });
+
+export const idAtom = atom({
+  key: 'ID',
+  default: "",
+  effects_UNSTABLE: [persistAtom], 
+});

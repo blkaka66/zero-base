@@ -5,7 +5,7 @@ import "firebase/compat/auth";
 import './LoginWithIdPw.css';
 import { useNavigate } from "react-router-dom";
 import { useSetRecoilState } from 'recoil';
-import { isAdminAtom, isLoggedInAtom,nickNameAtom} from "../state/login";
+import { idAtom, isAdminAtom, isLoggedInAtom,nickNameAtom} from "../state/login";
 
 interface User {
   uid: string;
@@ -38,13 +38,14 @@ function Login(): JSX.Element {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const setNickNmae= useSetRecoilState(nickNameAtom);
-  
+  const setID = useSetRecoilState(idAtom);
 
   const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password);
       setLoggedIn(true);
+
 
 
       const user = firebase.auth().currentUser;
@@ -58,6 +59,8 @@ function Login(): JSX.Element {
         {
           console.log(userData.NickName);
           setNickNmae(userData.NickName);
+          setID(user.uid);
+
           isAdmin(user, setIsAdmin);
           navigate("/main");
           console.log("아이디로 로그인성공");
