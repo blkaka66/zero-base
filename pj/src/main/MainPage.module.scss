@@ -1,0 +1,33 @@
+.mainPage {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+  
+    .boardBody {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid red;
+      border-radius: 3%;
+      padding: 10px;
+  
+      .moveToBoard {
+        position: relative;
+        margin-bottom: 30px;
+        color: red;
+        width: 200px;
+      }
+      .contents {
+
+          .contentTitle {
+            display: inline-block;
+            border:1px solid black;
+            width: 100%;
+            
+            height:30px;
+          }
+        
+      }
+    }
+  }
+  

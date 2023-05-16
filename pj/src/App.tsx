@@ -5,16 +5,25 @@ import { Link } from 'react-router-dom';
 import { signInWithGoogle } from './login/LoginwithGoogle';
 import Login from './login/LoginWithIdPw';
 import { useNavigate } from "react-router-dom";
-import { useSetRecoilState } from 'recoil';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { isAdminAtom, isLoggedInAtom } from "../src/state/login";
+import { useEffect } from 'react';
 
 export function App(): JSX.Element {
+  const navigate = useNavigate();
   const setIsAdmin = useSetRecoilState(isAdminAtom);
   const setLoggedIn = useSetRecoilState(isLoggedInAtom);
-  const navigate = useNavigate();
+  const isLoggedIn = useRecoilValue(isLoggedInAtom);
+
+  
+  useEffect(() => {
+    if(isLoggedIn){
+      navigate("/main");
+    }
+  }, []);
+
   return (
     <div className={styles.App}>
-
       <div className={styles.signUpDiv}>
         <Link to={`/signUp`}>회원가입 </Link>
         <Link to={`/signUpWithGoogle`}>구글로 회원가입</Link>

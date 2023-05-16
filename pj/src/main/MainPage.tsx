@@ -4,7 +4,7 @@ import { firebaseStart } from "../firebase/InitFirebase";
 import { useEffect, useState } from "react";
 import getData from "../getData/getData";
 import { Link } from "react-router-dom";
-
+import styles from "./MainPage.module.css"
 //여기서 firebaseStart이거 한번 더 호출해야지만 에러가 안떠요
 firebaseStart();
 
@@ -40,29 +40,26 @@ function MainPage(): JSX.Element {
 
 
 return(
-    <>
+    <div className={styles.mainPage}>
       <PostList board={freePosts} boardName="free" />
       <PostList board={devPosts} boardName="development" />
       <PostList board={funPosts} boardName="fun" />
       <PostList board={fashionPosts} boardName="fashion" />
 
-    </>
+    </div>
   );
 };
 
 function PostList({ board, boardName }: PostListProps): JSX.Element{
   const limitedPosts = board.slice(0, 10); 
   return (
-    <div>
-
-
-    <Link to={`/boards/${boardName}`}> {boardName} 게시판 </Link>
+    <div className={styles.boardBody}>
+    <Link to={`/boards/${boardName}`} className={styles.moveToBoard}> {boardName} 게시판 </Link>
       {limitedPosts.map((post) => (
-        <ul key={post.docId}> 
-          <li>
-           <Link to={`/boards/${boardName}/${post.docId}`} state={post}>{post.content}</Link>
+        <ul key={post.docId} className={styles.contents}> 
+          <li >
+           <Link to={`/boards/${boardName}/${post.docId}`} state={post} className={styles.contentTitle}>{post.content} </Link>
           </li>
-          --------
         </ul>
       ))}
      

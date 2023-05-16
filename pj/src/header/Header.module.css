@@ -3,6 +3,33 @@
   top: 0px;
   height: 50px;
   width: 100%;
-  background-color: red;
+  display: flex;
+  background-color: #25282b;
   z-index: 999;
+  align-items: center;
+}
+
+.button {
+  position: absolute;
+  background-color: white;
+  cursor: pointer;
+  height: 60%;
+}
+.button .spans {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: green;
+}
+
+.logIn {
+  left: 30px;
+}
+
+.logOut {
+  left: 30px;
+}
+
+.adminMenu {
+  right: 30px;
 }

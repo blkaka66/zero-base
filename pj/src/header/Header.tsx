@@ -14,10 +14,23 @@ function Header(props: any): JSX.Element {
 
     return (
         <div className={styles.header}>
-            {!isLoggedIn && <Link to={`/`}>로그인</Link>}
-            {isLoggedIn && <button onClick={() => logOut(setIsAdmin, setLoggedIn)}>로그아웃</button>}
-            {isAdmin && <Link to={`/admin-menu`}>관리자 메뉴</Link>}
+            {!isLoggedIn && (
+                <Link to={`/`} className={`${styles.button} ${styles.logIn}`}>
+                <span className={styles.spans}>Login</span>
+                </Link>
+            )}
+            {isLoggedIn && (
+                <button onClick={() => logOut(setIsAdmin, setLoggedIn)} className={`${styles.button} ${styles.logOut}`}>
+                Logout
+                </button>
+            )}
+            {isAdmin && (
+                <Link to={`/admin-menu`} className={`${styles.button} ${styles.adminMenu}`}>
+                <span className={styles.spans}>Admin Menu</span>
+                </Link>
+            )}
         </div>
+
       );
     }
     
