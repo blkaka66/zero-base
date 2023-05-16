@@ -1,4 +1,4 @@
-import firebase from 'firebase/compat/app';
+
 import 'firebase/compat/firestore';
 import { useState } from 'react';
 
@@ -13,12 +13,12 @@ interface BoardData {
   like:number;
   disLike:number;
   likeActionBy: string[];
+  comments: {},
 }
 
 
-//firebaseStart();
-//왜 여기서 initializeApp을 한번 더해야만 오류가 안나지?
-const db = firebase.firestore();
+
+
 
 
 
@@ -35,6 +35,7 @@ function AdminMenu() {
     like:0,
     disLike:0,
     likeActionBy: [],
+    comments: {},
   });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

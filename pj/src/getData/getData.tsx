@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+
 
 import firebase from 'firebase/compat/app';
+
 
 interface Post {
   title: string;
@@ -10,16 +11,18 @@ interface Post {
   like:number;
   disLike:number;
   likeActionBy: string[];
+  timeStamp:string;
 }
 
 function getData(boardName:string): Promise<Post[]> {
   const db = firebase.firestore();
-  const postsRef = db.collection("boards").doc(boardName).collection(boardName);
+  const postsRef = db.collection("boards").doc(boardName).collection(boardName).orderBy("timeStamp","desc");
 
   return postsRef.get().then((querySnapshot) => {
     const data: Post[] = [];
     querySnapshot.forEach((doc) => {
       const post = doc.data() as Post;
+
       data.push({ ...post, docId: doc.id });
     });
 

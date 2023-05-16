@@ -1,11 +1,9 @@
-import { isAdminAtom, isLoggedInAtom } from "../state/login";
-import { useRecoilValue } from 'recoil';
-import firebase from 'firebase/compat/app';
+
 import 'firebase/compat/firestore';
 import { firebaseStart } from "../firebase/InitFirebase";
 import { useEffect, useState } from "react";
 import getData from "../getData/getData";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //여기서 firebaseStart이거 한번 더 호출해야지만 에러가 안떠요
 firebaseStart();
@@ -53,13 +51,13 @@ return(
 };
 
 function PostList({ board, boardName }: PostListProps): JSX.Element{
-
+  const limitedPosts = board.slice(0, 10); 
   return (
     <div>
 
 
     <Link to={`/boards/${boardName}`}> {boardName} 게시판 </Link>
-      {board.map((post) => (
+      {limitedPosts.map((post) => (
         <ul key={post.docId}> 
           <li>
            <Link to={`/boards/${boardName}/${post.docId}`} state={post}>{post.content}</Link>
