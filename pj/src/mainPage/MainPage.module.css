@@ -16,10 +16,17 @@
   margin-bottom: 30px;
   color: red;
   width: 200px;
+  text-decoration: none;
 }
 .mainPage .boardBody .contents .contentTitle {
   display: inline-block;
   border: 1px solid black;
   width: 100%;
+  text-decoration: none;
   height: 30px;
+}
+.mainPage .boardBody .contents .contentTitle .content {
+  position: relative;
+  top: 5px;
+  color: green;
 }

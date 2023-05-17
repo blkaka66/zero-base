@@ -10,12 +10,13 @@
       border: 1px solid red;
       border-radius: 3%;
       padding: 10px;
-  
+      
       .moveToBoard {
         position: relative;
         margin-bottom: 30px;
         color: red;
         width: 200px;
+        text-decoration :none;
       }
       .contents {
 
@@ -23,8 +24,14 @@
             display: inline-block;
             border:1px solid black;
             width: 100%;
-            
+            text-decoration :none;
             height:30px;
+            .content{
+              
+              position:relative;
+              top:5px;
+              color:green;
+            }
           }
         
       }

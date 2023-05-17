@@ -1,0 +1,30 @@
+.navigate{
+    position: relative;
+    top:100px;
+
+    .pagination{
+      
+        display:flex;
+        justify-content: center;
+        .pageItem{
+            margin-left:10px;
+            .pageItemActive{
+                display:inline-block;
+                width:20px;
+                height:20px;
+                text-decoration :none;
+                border:1px solid black;
+                text-align: center;
+                line-height:center
+            }
+            .pageLink{
+                display:inline-block;
+                width:20px;
+                height:20px;
+                text-decoration :none;
+                text-align: center;
+                line-height:center
+            }
+        }
+    }
+}

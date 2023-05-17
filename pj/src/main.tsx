@@ -9,7 +9,7 @@ import {App} from './App.tsx';
 import RegisterMember from './firebase/Register.tsx';
 import Header from './header/Header.tsx';
 import SignupWithGoogle from './firebase/RegisterWithGoogle.tsx';
-import {MainPage} from './main/MainPage.tsx';
+import {MainPage} from './mainPage/MainPage.tsx';
 import AdminMenu from './admin-menu/AdminMenu.tsx';
 import Board from './board/board.tsx';
 import WriteContent from './makeContent/WriteContent.tsx';

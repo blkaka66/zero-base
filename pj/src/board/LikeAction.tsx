@@ -3,6 +3,7 @@ import "firebase/compat/firestore";
 import { db } from "./content";
 import { useRecoilValue } from "recoil";
 import { idAtom } from "../state/login";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -21,15 +22,16 @@ const handleLike = async (
   post: Post,
   setPost: any,
   ID: string,
-  type: "like" | "disLike"
+  type: "like" | "disLike",
+  navigate: ReturnType<typeof useNavigate>,
 ) => {
   if (boardName !== undefined) {
     console.log(ID);
 
-    if (post.likeActionBy.includes(ID)) {
-      alert("이미 눌렀습니다");
-      return;
-    }
+    // if (post.likeActionBy.includes(ID)) {
+    //   alert("이미 눌렀습니다");
+    //   return;
+    // }
     const postRef = db
     .collection("boards")
     .doc(boardName)
@@ -58,14 +60,14 @@ const handleLike = async (
 
     if(type === "disLike"){
 
-      checkDisLike(postRef);
+      checkDisLike(postRef,boardName,navigate);
         
     }
   }
 };
 
 
-async function checkDisLike(postRef:any)  {
+async function checkDisLike(postRef:any,boardName:string,navigate:any)  {
 
     try {
       const postSnapshot = await postRef.get();
@@ -73,7 +75,9 @@ async function checkDisLike(postRef:any)  {
         const disLikeCount = postSnapshot.data()?.disLike || 0;
         if(disLikeCount >= 10){
           postRef.delete();
-          console.log("삭제")
+          alert("비추천 수가 10개를 넘어 글이 삭제됩니다")
+          navigate(`/boards/${boardName}`);
+    
         }
       } else {
         console.log("비추");

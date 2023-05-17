@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import getData from "../getData/getData";
 import { Link } from "react-router-dom";
 import styles from "./MainPage.module.css"
+
 //여기서 firebaseStart이거 한번 더 호출해야지만 에러가 안떠요
 firebaseStart();
 
@@ -58,7 +59,7 @@ function PostList({ board, boardName }: PostListProps): JSX.Element{
       {limitedPosts.map((post) => (
         <ul key={post.docId} className={styles.contents}> 
           <li >
-           <Link to={`/boards/${boardName}/${post.docId}`} state={post} className={styles.contentTitle}>{post.content} </Link>
+           <Link to={`/boards/${boardName}/${post.docId}`} state={post} className={styles.contentTitle}><span className={styles.content}> {post.content} </span> </Link>
           </li>
         </ul>
       ))}

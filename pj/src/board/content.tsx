@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate, useParams } from 'react-router-dom';
 import firebase from 'firebase/compat/app';
 import { handleLike } from './LikeAction';
 import { useRecoilValue } from 'recoil';
 import { idAtom } from '../state/login';
-import {addComment} from './addComment';
-
+import {addComment, removeComment} from './commentAction';
+import styles from './content.module.css'
+import { nickNameAtom } from '../state/login';
 interface Post {
   title: string;
   content: string;
@@ -14,14 +15,16 @@ interface Post {
   like: number;
   disLike: number;
   likeActionBy: string[];
-  comments: { [uid: string]: string };
+  comments: { [uid: string]: { nickName: string, commentInput: string } };
+
 
 }
 export const db = firebase.firestore();
 function Content(): JSX.Element {
   const documentId = useLocation().state.docId;
   const ID:string = useRecoilValue(idAtom);
-  console.log(ID);
+  const nickName:string = useRecoilValue(nickNameAtom);
+  const navigate = useNavigate();
   const boardName = useParams().boardName as string;
  const [post, setPost] = useState<Post>({
     title: '',
@@ -52,48 +55,57 @@ function Content(): JSX.Element {
       
         } else {
           alert('삭제된 페이지입니다');
+          navigate(`/boards/${boardName}`);
         }
       });
 
     }
-  }, [commentInput]);
+  }, [commentInput,ID]);
   
   
 
   const handleLikeClick = async (type: "like" | "disLike") => {
-    await handleLike(boardName, post, setPost, ID, type);
+    await handleLike(boardName, post, setPost, ID,type,navigate);
   };
 
   const addCommentClick = async () => {
-    await addComment(boardName, post, setPost, ID,commentInput);
+    await addComment(boardName, post, setPost, ID,nickName,commentInput);
     setCommentInput('');
+    
+  };
+
+  const removeCommentClick = async (comment:string) => {
+
+    await removeComment(boardName, post, setPost, ID,nickName,comment);
   };
   return (
     <>
-      <div>{post.title}</div>
-      <div>{post.content}</div>
+      <div className={styles.title}>{post.title}</div>
+      <div className={styles.content}>{post.content}</div>
 
-      {Object.entries(post.comments).map(([uid, comment]) => (
+<div  className={styles.commentBoard}>
+      {Object.entries(post.comments).map(([uid, commentEntries]) => (
   <div key={uid}>
-    
     <ul>
-      {Object.entries(comment).map(([nestedUid, nestedComment]) => (
-        <li key={nestedUid}>
-          <p>{nestedUid}:{nestedComment}</p>
-          //////////
-        </li>
+      {Object.entries(commentEntries).map(([nesteduid, nestedComment]) => (
+        <div key={`${nesteduid}-${nestedComment}`}> 
+          <li key={nesteduid}>
+              <div className={styles.comment}>{nestedComment.nickName}: {nestedComment.commentInput}</div>
+              {nesteduid === ID && <button onClick={() => removeCommentClick(nestedComment.commentInput)} className={styles.removeComment}>댓글 삭제</button>}
+          </li>
+       
+        </div>
       ))}
     </ul>
   </div>
 ))}
+</div>
 
-
-
-      <div>
-      <button onClick={() => handleLikeClick("like")}>{post.like}Like</button>
-      <button onClick={() => handleLikeClick("disLike")}>{post.disLike}Dislike</button>
-      <input type="text"  placeholder="댓글을 입력하세요" value={commentInput} onChange={(e) => setCommentInput(e.target.value)}/>
-      <button onClick={() => addCommentClick()}>댓글 </button>
+      <div className={styles.buttons}>
+        <button className={styles.like} onClick={() => handleLikeClick("like")}>{post.like} Like</button>
+        <button className={styles.disLike}  onClick={() => handleLikeClick("disLike")}>{post.disLike} Dislike</button>
+        <input type="text"  placeholder="댓글을 입력하세요" value={commentInput} onChange={(e) => setCommentInput(e.target.value)}/>
+        <button onClick={() => addCommentClick()}>댓글올리기 </button>
       </div>
     </>
   );

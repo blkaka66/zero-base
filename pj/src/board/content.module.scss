@@ -1,0 +1,52 @@
+.title{
+    position: absolute;
+    width:100px;
+    height:50px;
+    left:30px;
+}
+.content{
+    position: absolute;
+    width:80%;
+    height:500px;
+    left:30px;
+    top:30px;
+    border:1px solid red;
+}
+.commentBoard{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    width:80%;
+    height:300px;
+    left:30px;
+    top:550px;
+    border:1px solid red;
+
+    .comment{
+        padding-left:10px;
+        padding-top:10px;
+       
+    }
+    .removeComment{
+        margin-left:10px;
+        margin-top:5px;
+    }
+}
+
+.buttons{
+    position:absolute;
+
+    top:500px;
+    left:30px;
+    display:flex;
+    width:80%;
+    justify-content: space-around;
+    .like{
+        border-radius: 10%;
+    }
+    .disLike{
+        padding-left:10px;
+        border-radius: 10%;
+    }
+   
+}

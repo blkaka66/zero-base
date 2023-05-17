@@ -1,0 +1,28 @@
+.navigate {
+  position: relative;
+  top: 100px;
+}
+.navigate .pagination {
+  display: flex;
+  justify-content: center;
+}
+.navigate .pagination .pageItem {
+  margin-left: 10px;
+}
+.navigate .pagination .pageItem .pageItemActive {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+  border: 1px solid black;
+  text-align: center;
+  line-height: center;
+}
+.navigate .pagination .pageItem .pageLink {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+  text-align: center;
+  line-height: center;
+}

@@ -1,16 +1,18 @@
 import styles from "./Header.module.css";
 
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { isAdminAtom, isLoggedInAtom } from "../state/login";
+import { isAdminAtom, isLoggedInAtom, nickNameAtom ,idAtom} from "../state/login";
 import { Link } from "react-router-dom";
 
 function Header(props: any): JSX.Element {
     const setIsAdmin = useSetRecoilState(isAdminAtom);
     const setLoggedIn = useSetRecoilState(isLoggedInAtom);
+    const setnickName = useSetRecoilState(nickNameAtom);
+    const setID = useSetRecoilState(idAtom);
 
     const isAdmin = useRecoilState(isAdminAtom)[0];
     const isLoggedIn = useRecoilState(isLoggedInAtom)[0];
-    
+
 
     return (
         <div className={styles.header}>
@@ -20,7 +22,7 @@ function Header(props: any): JSX.Element {
                 </Link>
             )}
             {isLoggedIn && (
-                <button onClick={() => logOut(setIsAdmin, setLoggedIn)} className={`${styles.button} ${styles.logOut}`}>
+                <button onClick={() => logOut(setIsAdmin, setLoggedIn,setnickName,setID)} className={`${styles.button} ${styles.logOut}`}>
                 Logout
                 </button>
             )}
@@ -34,9 +36,11 @@ function Header(props: any): JSX.Element {
       );
     }
     
-function logOut(setIsAdmin: (isAdmin: boolean) => void,setLoggedIn: (isAdmin: boolean) => void){
+function logOut(setIsAdmin: (isAdmin: boolean) => void,setLoggedIn: (isLoggedIn: boolean) => void,setnickName: (nickName: string) => void,setID: (ID: string) => void){
     setLoggedIn(false);
     setIsAdmin(false);
+    setnickName("");
+    setID("");
     console.log("로그아웃 되었습니다");
 }
 
