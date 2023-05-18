@@ -25,22 +25,55 @@ function Board(): JSX.Element {
   const isLoggedIn = useRecoilValue(isLoggedInAtom);
   const boardName = useParams().boardName;
 
+
+  const [searchResult, setSearchResult] = useState<Post[]>([]); 
   useEffect(() => {
     if (boardName !== undefined) {
       getData(boardName).then((data) => setBoardData(data));
     }
   }, [boardName]);
 
-  // Pagination
+
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = boardData.slice(indexOfFirstPost, indexOfLastPost);
 
-  // Change page
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+  const searchContentAction = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const value = event.currentTarget.value;
+    const upperValue= value.toUpperCase();
+    if(upperValue.length>0){
+     
+      const searchResult = searchContent(upperValue,boardData);
+      setSearchResult(searchResult);
+      console.log(searchResult)
+    }
+
+  }
   return (
     <>
+      <input 
+        type="contentTitle"
+        placeholder="검색"
+        onKeyUp={searchContentAction}
+        className=""
+      />
+      
+      {searchResult.length > 0 && (
+            <ul className={boardStyles.list}>
+              {searchResult.map((board) => (
+           
+                <Link to={`/boards/${boardName}/${board.docId}`} state={board} className={boardStyles.searchResult} key={board.docId}>{board.title}</Link>
+         
+              ))}
+            </ul>
+        )}
+ 
+
+
+
+
       {isLoggedIn && <Link to={`/boards/${boardName}/write`} className={boardStyles.writeContent}>글쓰기</Link>}
       <div className={styles.mainPage}>
         <PostList board={currentPosts} boardName={boardName ?? ''} />
@@ -53,6 +86,11 @@ function Board(): JSX.Element {
       />
     </>
   );
+}
+
+function searchContent(value:string,boardData:any){
+  const searchResult = boardData.filter((data:any) => data.title.toUpperCase().indexOf(value) !==-1).slice(0, 5);
+  return searchResult;
 }
 
 export default Board;

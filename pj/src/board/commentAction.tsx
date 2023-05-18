@@ -29,10 +29,12 @@ interface Post {
   
     try {
       const newComment = { [ID]: { nickName, commentInput } };
+
       await postRef.update({
         comments: firebase.firestore.FieldValue.arrayUnion(newComment),
+
       });
-  
+     
       setPost((prevPost: Post) => ({
         ...prevPost,
         comments: { ...prevPost.comments, ...newComment },
@@ -41,6 +43,7 @@ interface Post {
       console.error("Error updating post:", error);
     }
   };
+
 
   const removeComment = async (
     boardName: string,
@@ -57,15 +60,18 @@ interface Post {
       .doc(post.docId);
   
     try {
-      // Remove the comment from the post
-      const updatedComments = { ...post.comments };
+
+      const updatedComments: Record<string, { nickName: string; commentInput: string; }> = { ...post.comments };
   
       for (const uid in updatedComments) {
-        if (updatedComments[uid][ID] !== undefined) {
+        if (updatedComments.hasOwnProperty(uid)) {
           const commentData = updatedComments[uid][ID];
-          if (commentData.nickName === nickName && commentData.commentInput === comment) {
-            delete updatedComments[uid];
-            
+          if (commentData && commentData.nickName === nickName && commentData.commentInput === comment) {
+            delete updatedComments[uid][ID];
+  
+            if (Object.keys(updatedComments[uid]).length === 0) {
+              delete updatedComments[uid];
+            }
           }
         }
       }
@@ -77,13 +83,10 @@ interface Post {
         comments: updatedComments,
       });
   
-
       setPost((prevPost) => ({
         ...prevPost,
         comments: updatedComments,
-
       }));
-     
   
       console.log("Comment removed successfully.");
     } catch (error) {
@@ -91,9 +94,6 @@ interface Post {
     }
   };
   
- 
-  
-
   
   
 export { addComment,removeComment };

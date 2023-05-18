@@ -8,3 +8,19 @@
   line-height: 30px;
   z-index: 99;
 }
+
+.list {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+}
+.list li {
+  display: inline-block;
+}
+.list .searchResult {
+  width: 100px;
+  height: 50px;
+  border: 1px solid red;
+  text-decoration: none;
+  display: inline-block;
+}

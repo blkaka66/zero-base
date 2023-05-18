@@ -16,8 +16,6 @@ interface Post {
   disLike: number;
   likeActionBy: string[];
   comments: { [uid: string]: { nickName: string, commentInput: string } };
-
-
 }
 export const db = firebase.firestore();
 function Content(): JSX.Element {

@@ -59,7 +59,7 @@ function PostList({ board, boardName }: PostListProps): JSX.Element{
       {limitedPosts.map((post) => (
         <ul key={post.docId} className={styles.contents}> 
           <li >
-           <Link to={`/boards/${boardName}/${post.docId}`} state={post} className={styles.contentTitle}><span className={styles.content}> {post.content} </span> </Link>
+           <Link to={`/boards/${boardName}/${post.docId}`} state={post} className={styles.contentTitle}><span className={styles.content}> {post.title} </span> </Link>
           </li>
         </ul>
       ))}
