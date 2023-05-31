@@ -28,10 +28,11 @@ const handleLike = async (
   if (boardName !== undefined) {
     console.log(ID);
 
-    // if (post.likeActionBy.includes(ID)) {
-    //   alert("이미 눌렀습니다");
-    //   return;
-    // }
+    if (post.likeActionBy.includes(ID)) {
+      alert("이미 눌렀습니다");
+      return;
+    }
+
     const postRef = db
     .collection("boards")
     .doc(boardName)
