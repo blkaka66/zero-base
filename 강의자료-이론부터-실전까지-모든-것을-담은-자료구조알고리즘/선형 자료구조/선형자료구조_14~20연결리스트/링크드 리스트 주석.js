@@ -28,6 +28,7 @@ LinkedList.prototype.printNode = function(){
     }
     console.log("null");//맨끝엔 무조건 null이니까 콘솔로 찍자
 };
+
 //append(): 연결 리스트 끝에 노드 추가
 LinkedList.prototype.append = function(value){ // value에 값 매개변수로 받기
     let node = new Node(value); // 새 노드 만들어서 data에 value 집어넣기

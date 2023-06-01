@@ -4,7 +4,7 @@ const HASH_SIZE = 37; //테이블 사이즈 처음에 정해야함
 //Element(): key, value 저장 위한 생성자
 function Element(key ,value){
     this.key =key;
-    this. value =value;
+    this.value =value;
 };
 
 //HashTable():생성자
@@ -60,8 +60,8 @@ ht.put("Ana",173);
 
 ht.put("sue",543);
 ht.put("asd",777);
-//console.log(ht)
+console.log(ht)
 
 ht.remove("asd")
-//console.log(ht)
+console.log(ht)
 

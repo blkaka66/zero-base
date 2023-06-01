@@ -31,11 +31,11 @@ Dictionary.prototype.size = function(){
 //has(): 개체 존재 여부 확인(key 정보를 배열로 반환)
 Dictionary.prototype.has = function(key){
 
-    return this.items.hasOwnProperty(key);//key에 맞는 value 있는지 확인
+    return this.items.hasOwnProperty(key);//key에 맞는 value 있으면 true, 없으면 false 반환
 };
 
 //set(): 개체(entity) 추가
-Dictionary.prototype.set = function(key , value){
+Dictionary.prototype.set = function(key , value){ 
     this.items[key] = value;
 };
 
@@ -81,6 +81,7 @@ Dictionary.prototype.each = function(fn){
 function printDictionary(key , value){
     console.log(`key : ${key}`);
     console.log(`value : ${value}`);
+ 
 };
 
 
@@ -94,3 +95,5 @@ console.log(dicta);
 console.log(dicta.keys());
 
 dicta.each(printDictionary);
+
+
