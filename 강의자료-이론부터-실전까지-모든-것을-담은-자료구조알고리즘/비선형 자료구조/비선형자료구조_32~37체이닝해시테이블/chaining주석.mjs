@@ -35,6 +35,7 @@ ChainingHashTable.prototype.put = function(key , value){
     if(this.table[index] === undefined){//만약 빈칸이면()
         this.table[index] = new LinkedList();//일단 링크드리스트 만들기
     }
+
     this.table[index].append(new Element(key,value)); //링크드리스트로 append함
     this.length++;
     return true;
@@ -125,8 +126,9 @@ cht.put("Ana",172);
 cht.put("abc",432);
 cht.put("asd",788);
 cht.put("nbv",32);
+cht.put("nbv",35);
 cht.put("nbbv",32);
 
 
 console.log(cht.remove(","));
-console.log(cht)
+console.log(cht.getBuffer())

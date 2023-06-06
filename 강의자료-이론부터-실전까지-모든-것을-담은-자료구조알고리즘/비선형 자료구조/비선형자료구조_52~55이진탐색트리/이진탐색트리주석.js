@@ -113,8 +113,8 @@ BinarySearchTree.prototype._removeNode = function (node , value){
             let aux = this._findMinNode(node.right);//오른쪽 subtree의 최솟값 노드찾기
  
             node.value = aux.value;//오른쪽 subtree의 최솟값 노드가 승격
-            node.right = this._removeNode(node.right , aux.value);//원래 있던 최솟값 노드 자리는 없애기
-
+            node.right = this._removeNode(node.right , aux.value);//원래 있던 최솟값 노드 자리는 없애고 재귀적으로 return 해서 오른쪽 서브트리 업데이트함
+ 
         }
     }
     else if (node. value > value){//이건 찾는거임

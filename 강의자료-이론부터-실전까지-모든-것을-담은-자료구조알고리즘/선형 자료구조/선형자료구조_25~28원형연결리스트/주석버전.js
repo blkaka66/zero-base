@@ -28,21 +28,21 @@ CircularLinkedList.prototype.printNode = function(){
     console.log("null");
 }
 
-CircularLinkedList.prototype.append = function(value){
+CircularLinkedList.prototype.append = function(value){//맨끝에 노드 추가하기
     let node = new Node(value);
     let current = this.head;
 
     if(this.head === null){
         this.head =node;
     }else{
-        while(current.next != this.head){
-            current =current.next;
+        while(current.next != this.head){//맨끝 노드까지 탐색하기
+            current =current.next;//기존 맨끝노드가 current일때 current.next는 head를 가리킴
 
         }
-        current.next =node;
+        current.next =node;//기존 맨끝노드의 next를 새 노드를 가리키게하기
     }
 
-    node.next = this.head;
+    node.next = this.head;//새노드으 next는 head를 가리키게
     this.length++;
 
 };

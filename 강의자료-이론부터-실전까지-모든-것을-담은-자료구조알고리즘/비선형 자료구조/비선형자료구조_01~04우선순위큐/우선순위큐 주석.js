@@ -39,22 +39,22 @@ PriorityQueue.prototype.enqueue = function(data,priority){
     return this.array.length;
 };
 
-//dequeue(): 객체 내 데이터 존재여부 파악
+//dequeue(): 가장 첫 데이터 삭제하면서 반환
 PriorityQueue.prototype.dequeue = function(){
     return this.array.shift();
 };
 
-//front(): 가장 첫 데이터 반환
+//front(): 가장 첫 데이터 반환(삭제x)
 PriorityQueue.prototype.front = function(){
     return this.array.length == 0 ? undefined : this.array[0].data;
 };
 
-//size(): 가장 첫 데이터 반환
+//size(): 크기 반환
 PriorityQueue.prototype.size = function(){
     return this.array.length;
 };
 
-//clear(): 가장 첫 데이터 반환
+//clear(): 초기화
 PriorityQueue.prototype.clear = function(){
     this.array=[];
 };
@@ -75,4 +75,5 @@ pq.enqueue("yyy",15);
 
 
 console.log(pq.size());
-console.log(pq);
+console.log(pq.dequeue());
+console.log(pq.getBuffer());

@@ -10,10 +10,10 @@ function circularQueue(array= [], size = DEFAULT_SIZE){//array랑 size따로 입
 
 //getBuffer() : 객체 내 데이터 셋 반환
 circularQueue.prototype.getBuffer = function(){
-    return this.array.slice(); // return this.array를안하고 굳이 slice를 하는 이유는 외ㅏ부에서 배열을 수정하지 못하게 하려고
+    return this.array.slice(); // return this.array를안하고 굳이 slice를 하는 이유는 외부에서 배열을 수정하지 못하게 하려고
 };
 
-//isEmpty() : 객체 내 데이터 셋 반환
+//isEmpty() : 객체 내 데이터 비어있는지 확인
 circularQueue.prototype.isEmpty = function(){
     return this.length === 0;
 };
@@ -57,12 +57,12 @@ circularQueue.prototype.front = function(){
     return this.length == 0 ? undefined : this.array[this.head];
 };
 
-//size() : 가장 첫 데이터 반환
+//size() : 데이터 사이즈 반환
 circularQueue.prototype.size = function(){
     return this.length;
 };
 
-//clear() : 가장 첫 데이터 반환
+//clear() : 초기화
 circularQueue.prototype.clear = function(size = DEFAULT_SIZE){
     this.array=[];
     this.size=size;

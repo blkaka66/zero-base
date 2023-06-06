@@ -116,10 +116,10 @@ DoubleLinkedList.prototype.removeAt = function(position = 0 ){
             this.tail = null;//tail은 null가리킴
         }
         else{//노드 1개 이상이면
-            this.head.prev= null;//head의 prev는 null임
+            this.head.prev= null;//head(기존 두번째 노드)의 prev는 null임
         }
     }
-    else if(position === this.length-1){//맨끝노드 삭제해야하면
+    else if(position === this.length-1){//맨끝노드 삭제해야하면3
         current = this.tail;//기존 맨끝노드 저장
         this.tail = current.prev;//기존 맨끝에서 한칸 전 노드랑 tail연결해서 기존 맨끝노드 증발
         this.tail.next = null;//tail.next는 null
