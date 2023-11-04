@@ -41,7 +41,6 @@ let order = [ascending, descending];
 for (let i = 0; i < sorting.length; i++) {
   for (let j = 0; j < order.length; j++) {
     console.log(sorting[i].name, order[j].name);
-
     array = [...init_array];
     sorting[i](array, order[j]);
     console.log(array);

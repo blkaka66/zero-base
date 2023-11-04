@@ -1,0 +1,39 @@
+.entire {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+}
+.entire .imgDiv {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background-color: yellow;
+}
+.entire .underDiv {
+  position: relative;
+  top: 500px;
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+.entire .underDiv .title {
+  position: absolute;
+  width: 80%;
+  top: 80px;
+  left: 10%;
+  height: 40px;
+  background-color: white;
+  border: solid;
+  border-width: 0 0 1px;
+  border-color: red;
+}
+.entire .underDiv .omakase {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 150px;
+  height: 100px;
+  background-color: green;
+}
