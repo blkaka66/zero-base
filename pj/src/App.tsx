@@ -25,7 +25,6 @@ export function App(): JSX.Element {
   return (
     <div className={styles.App}>
       <div className={styles.signUpDiv}>
-        <Link to={`/signUp`}>회원가입 </Link>
         <Link to={`/signUpWithGoogle`}>구글로 회원가입</Link>
       </div>
       <div className={styles.signInDiv}>

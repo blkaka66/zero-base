@@ -20,7 +20,7 @@ let bubbleSort = function (arr, compare) {
       }
     }
   }
-};
+}
 
 /* test code */
 let init_array = [6, 5, 1, 3, 2, 4];
@@ -31,7 +31,6 @@ let order = [ascending, descending];
 for (let i = 0; i < sorting.length; i++) {
   for (let j = 0; j < order.length; j++) {
     console.log(sorting[i].name, order[j].name);
-
     array = [...init_array];
     sorting[i](array, order[j]);
     console.log(array);

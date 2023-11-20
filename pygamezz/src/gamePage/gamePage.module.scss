@@ -1,0 +1,23 @@
+.entireDiv{
+  position: relative;
+  left:10%;
+  width:80%;
+  top:100px;
+  height:700px;
+
+  border:solid;
+  border-width: 0 0 1px;
+  border-color: red;
+  .title{
+      position: absolute;
+      width:100%;
+      top:80px;
+      
+      height:40px;
+      background-color: white;
+      border:solid;
+      border-width: 0 0 1px;
+      border-color: red;
+    
+  }
+}

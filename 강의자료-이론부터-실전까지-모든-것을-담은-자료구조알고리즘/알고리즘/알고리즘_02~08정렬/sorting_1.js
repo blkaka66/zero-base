@@ -5,8 +5,8 @@ let swap = function (arr, idx_1, idx_2) {
 };
 
 let bubbleSort_1 = function (arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = 0; j < arr.length - 1; j++) {
+  for (let i = 0; i < arr.length - 1; i++) { //두개를묶어서 비교하니까 총 요소가 3개면 비교는 두번만 해도됨 그래서 -1이 붙음
+    for (let j = 0; j < arr.length - 1; j++) {//안 바깥 둘다 마찬가지 ㅇㅇ
       if (arr[j] > arr[j + 1]) {
         swap(arr, j, j + 1);
       }
