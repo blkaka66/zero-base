@@ -1,6 +1,6 @@
 
 import styles from './Header.module.css'
-function Header() : JSX.Element{
+function Header(): JSX.Element  {
   return (
     <div className={styles.header}>Header</div>
   )

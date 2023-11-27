@@ -2,7 +2,14 @@ import styles from './App.module.css';
 
 
 
-function App() : JSX.Element{
+
+
+
+function App() {
+
+
+
+
   return (
     <>
       <div className={styles.entire}>
